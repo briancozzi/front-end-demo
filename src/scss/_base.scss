@@ -1,0 +1,1224 @@
+@import "./mixins";
+
+body {
+  height: 100vh;
+  // font-size: var(--eve-font-size);
+  // ::-webkit-scrollbar {
+  //     display: none;
+  // }
+  font-family: var(--eve-font-family) !important;
+  font-weight: 500 !important;
+  // background-color: #f8f8f8 !important;
+  background-color: #fdfcff !important;
+  ::-webkit-scrollbar {
+    width: 3px !important;
+    height: 8px;
+  }
+}
+h5 {
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   // text-align: center;
+// }
+// .row {
+// }
+
+.fs-24px {
+  font-size: 24px !important;
+}
+
+.fs-20px {
+  font-size: 20px !important;
+}
+
+.text-danger {
+  color: var(--eve-red-color) !important;
+  // cursor: pointer;
+}
+
+.text-danger-pointer {
+  color: var(--eve-red-color) !important;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+  // cursor: pointer;
+}
+
+.badge {
+  &.badge-14px {
+    font-size: 14px !important;
+  }
+  &.badge-danger {
+    background-color: var(--eve-red-color) !important;
+  }
+  &.badge-orange {
+    background-color: #ed741f;
+  }
+}
+
+.text-green,
+.text-success {
+  color: var(--eve-green-color) !important;
+}
+
+.text-info {
+  color: var(--eve-primary-color) !important;
+}
+
+.bg-red {
+  background-color: var(--eve-red-color) !important;
+}
+
+.width-100px {
+  width: 100px;
+}
+
+.border-top,
+.border-bottom,
+.border-right {
+  border-color: var(--eve-border-color) !important;
+}
+
+.border {
+  border: 1px solid var(--eve-border-color) !important;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+ol li {
+  position: relative;
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 18px !important;
+  &::marker {
+    font-weight: 600;
+    padding-right: 16px;
+  }
+  &:before {
+    position: absolute;
+    left: -5px;
+  }
+}
+
+.page-header {
+  color: #3c4043;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.8845rem;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.eve-clickable {
+  color: var(--eve-primary-color);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--eve-primary-color);
+    // font-weight: 600;
+  }
+}
+
+.eve-clickable-success {
+  color: var(--eve-green-color);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--eve-green-color);
+    // font-weight: 600;
+  }
+}
+
+.eve-clickable-danger {
+  color: var(--eve-red-color);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--eve-red-color);
+    // font-weight: 600;
+  }
+}
+
+.eve-clickable-secondary {
+  color: var(--eve-secondary-color);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--eve-resecondaryd-color);
+    // font-weight: 600;
+  }
+}
+
+// fieldset {
+//   text-align: center;
+//   padding-bottom: 2.5em;
+//   label {
+//     display: block;
+//     margin-bottom: 0;
+//     color: #383838;
+//     font-size: 1em;
+//     font-weight: 500;
+//     margin-bottom: 12px;
+//     text-align: center;
+//   }
+// }
+
+.actions-wrapper {
+  position: relative;
+  display: flex;
+  // justify-content: center;
+  justify-content: space-between;
+  .action {
+    // color: var(--secondary-text-color);
+    // background-color: var(--eve-blue-color)
+    background-color: var(--eve-green-color);
+    color: white;
+    display: inherit;
+    justify-content: center;
+    flex-direction: row;
+    min-width: 150px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    align-items: center;
+    border-radius: 40px;
+    box-shadow: var(--eve-action-shadow);
+    box-sizing: border-box;
+    margin: auto;
+    min-height: 48px;
+    padding: 12px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--eve-green-color);
+      color: white;
+    }
+    .action-text {
+      flex-grow: 1;
+      margin-left: 16px;
+    }
+  }
+  .search-box {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // background: #cd595a;
+    // background: var(--gray);
+    // height: 40px;
+    border-radius: 50px;
+    position: absolute;
+    right: 0px;
+    padding: 8px;
+    box-shadow: var(--eve-action-shadow);
+    .search-input {
+      outline: none;
+      border: none;
+      background: none;
+      width: 0;
+      padding: 0;
+      color: rgba(0, 0, 0, 0.87);
+      // color: #fff;
+      float: left;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+      line-height: 32px;
+      &::placeholder {
+        // color: #202124;
+        color: #878787;
+        font-size: 14px;
+        // color: #dbc5b0;
+      }
+      &:focus,
+      &:not(:placeholder-shown) {
+        width: 240px;
+        padding: 0 6px;
+      }
+    }
+    /* icon */
+    .search-btn {
+      // color: #fff;
+      color: #202124;
+      float: right;
+      width: 32px;
+      height: 32px;
+      border-radius: 50px;
+      // background: #cd595a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    &:hover > .search-input {
+      width: 240px;
+      padding: 0 6px;
+    }
+    &:hover > .search-btn,
+    .search-input:focus + .search-btn,
+    .search-input:not(:placeholder-shown) + .search-btn {
+      background: #fff;
+      // color: #cd595a;
+      // color: var(--eve-green-color);
+      color: #202124;
+    }
+  }
+
+  &.margin-top {
+    margin-top: 24px;
+  }
+  &.margin-bottom {
+    margin-bottom: 16px;
+  }
+}
+
+.empty-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  &.mid-height {
+    height: calc(100vh - 293px) !important;
+  }
+  // .empty-text {
+  //   color: grey;
+  //   font-weight: 300;
+  // }
+  // h2 {
+  //   font-size: 31px;
+  // }
+  // h3 {
+  //   font-size: 17px;
+  // }
+  // .actions-wrapper {
+  //   margin-top: 32px;
+  // }
+}
+
+.time {
+  font-size: 12px !important;
+  color: #6c757d !important;
+}
+.booking-length-wrapper {
+  // margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  gap: 16px;
+  .date {
+    display: flex;
+    flex-direction: row;
+    label {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    span {
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .checkin-wrapper {
+      display: flex;
+      border-right: 1px solid #c9cdcf;
+      flex-direction: column;
+      padding-right: 12px;
+      .date-month {
+        font-size: 14px;
+        color: var(--eve-green-color);
+      }
+      .day {
+        font-size: 12px;
+      }
+    }
+    .checkout-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-left: 12px;
+      .date-month {
+        font-size: 14px;
+        color: var(--eve-green-color);
+      }
+      .day {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .stay {
+    text-align: center;
+    .badge {
+      background-color: var(--eve-green-color);
+      padding: 4px 8px;
+      border-radius: 12px;
+    }
+  }
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  position: fixed !important;
+}
+
+.bg-green {
+  background-color: var(--eve-green-color) !important;
+}
+
+.badge-success {
+  background-color: var(--eve-green-color) !important;
+}
+
+.bg-green-100 {
+  background-color: var(--bg-green-100);
+}
+
+.border-with-text {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--eve-green-color);
+  line-height: 0.1em;
+  margin: 48px 0 48px;
+  & > span {
+    background: #fff;
+    border: 1px solid var(--eve-green-color);
+    color: white;
+    padding: 4px 16px;
+    background-color: var(--eve-green-color);
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+}
+
+.mat-tab-group {
+  height: 100%;
+}
+.mat-tab-body-wrapper {
+  flex-grow: 1;
+}
+
+.mat-tab-body {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.mat-tab-body-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto !important;
+}
+
+.eve-footer {
+  background-color: white;
+  box-shadow: 0 -1px 4px -3px rgb(0 0 0 / 75%);
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  justify-content: space-between;
+  .status {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    i {
+      margin-right: 6px;
+    }
+  }
+}
+
+// .empty-data-container {
+//   &.meal-order-list {
+//     height: calc(100vh - 286px) !important;
+//   }
+// }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.btn-danger {
+  background-color: var(--eve-red-color);
+}
+
+// NEW CSSss
+
+input,
+textarea {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill::first-line,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    font-size: 16px !important;
+  }
+}
+
+label {
+  @include label;
+  .sub-text {
+    font-size: 12px !important;
+    color: #6c757d !important;
+  }
+}
+
+.eve-card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: $eve-border-radius;
+  box-shadow: $eve-box-shadow;
+  display: flex;
+  flex-direction: column;
+  // height: 100%;
+
+  // Card Bottom Margin
+  &.eve-card-bottom-margin {
+    margin-bottom: var(--eve-margin-bottom);
+  }
+
+  // Card header
+  .eve-card-header {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 1px;
+    margin-bottom: 24px;
+    .heading {
+      // font-size: 1.125rem;
+      font-size: 24px;
+      font-weight: var(--font-weight-600);
+      text-align: center;
+    }
+    .sub-heading {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 4px;
+      color: #6e6e6e;
+    }
+  }
+
+  // Card Body
+  .eve-card-body {
+    // height: calc(100vh - 294px);
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+
+  // Card Action options
+  .eve-card-actions {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+    flex: 0 1 min-content;
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.eve-bg-grey-1 {
+  background-color: #f7f7f7;
+}
+
+.text-1 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+h4 {
+  .section-text-1 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 500;
+  }
+}
+p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #4d4d4d;
+  font-weight: 400;
+}
+
+.anchor-1 {
+  color: var(--eve-primary-color);
+  cursor: pointer;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.gap-1 {
+  gap: 8px;
+}
+.gap-2 {
+  gap: 12px;
+}
+.gap-3 {
+  gap: 6px;
+}
+
+.gap-4 {
+  gap: 32px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  a {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    // color: #fff;
+  }
+}
+
+a {
+  // &:hover {
+  //   color: white !important;
+  //   cursor: pointer;
+  //   text-decoration: none !important;
+  // }
+}
+
+.section-text-2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.row {
+  margin: 0px 0px 0px -12px !important;
+}
+
+label {
+  .char-limit-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4d4d4d;
+  }
+}
+
+.ng-touched {
+  &.ng-invalid {
+    border-color: #e50b20 !important;
+  }
+}
+
+.header-title-1 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.header-title-wrap {
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  margin-left: -24px;
+  img {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  h2 {
+    margin-bottom: 0px;
+  }
+  & > div {
+    margin: auto;
+  }
+}
+
+.text-primary {
+  color: var(--eve-primary-color) !important;
+}
+
+.ml-272px {
+  margin-left: 272px;
+}
+
+.text-warning {
+  color: var(--eve-text-warning);
+}
+
+.important-box {
+  padding: 16px 32px;
+  border-radius: 4px;
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  ul {
+    list-style-type: disc;
+    margin-left: 16px;
+    li {
+      margin-bottom: 8px;
+    }
+  }
+  &.box-danger {
+    background-color: #ffe4e2;
+    .fa,
+    .pi {
+      color: var(--eve-red-color);
+      font-size: 18px;
+    }
+  }
+  &.box-warning {
+    background-color: #fff9aa;
+    .fa,
+    .pi {
+      color: var(--eve-text-warning);
+      font-size: 18px;
+    }
+  }
+  &.box-info {
+    background-color: #e8f5f9;
+    .fa,
+    .pi {
+      color: var(--eve-primary-color);
+      font-size: 18px;
+    }
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  .form-field-text {
+    font-size: 16px;
+  }
+}
+
+.text-secondary {
+  font-size: 12px;
+  color: #6c757d !important;
+}
+
+.border-radius-4px {
+  border-radius: 4px;
+}
+
+.w-150px {
+  width: 150px;
+}
+
+.popover-body {
+  padding: 0 !important;
+}
+.center_h_500px {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+.rotate-90 {
+  transition: 500ms ease all;
+  transform: rotate(90deg);
+}
+
+.form-details {
+  .row {
+    padding-bottom: 16px;
+    label {
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+    [class*="col-"] {
+      div {
+        font-size: 14px;
+        // line-height: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.text-muted {
+  color: #4c526c;
+}
+
+$space: 64;
+$font-size: 40;
+$font-weight: 900;
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ws-normal {
+  white-space: normal !important;
+}
+.ws-nowrap {
+  white-space: nowrap;
+}
+// PADDING & MARGINS 0, 2, 4 ... 50px
+// @while $space >= 0 {
+//   @include spacing($space);
+//   $space: $space - 2;
+// }
+
+.m-auto {
+  margin: auto;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto;
+}
+.mr-auto,
+.mx-auto {
+  margin-right: auto;
+}
+.mt-auto,
+.my-auto {
+  margin-top: auto;
+}
+.mb-auto,
+.my-auto {
+  margin-bottom: auto;
+}
+.mb-20 {
+  margin-bottom: -20px;
+}
+.mb-24 {
+  margin-bottom: -24px;
+}
+.mb96 {
+  margin-bottom: 96px;
+}
+
+.stock-scarcity > .form-group {
+  margin-bottom: 8px !important;
+}
+
+.pb40-i {
+  padding-bottom: 40px !important;
+}
+
+.no-border {
+  border-radius: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.mb0-imp {
+  margin-bottom: 0 !important;
+}
+
+.warehouse-layout-margin {
+  margin: 32px auto;
+}
+
+// // FONT SIZE 12, 14, 16 ... 40px
+// @while $font-size >= 12 {
+//   .f#{$font-size} {
+//     font-size: #{$font-size}px;
+//   }
+//   $font-size: $font-size - 2;
+// }
+
+// // FONT Weight 100, 200, 300 ... 900
+// @while $font-weight >= 100 {
+//   .fw#{$font-weight} {
+//     font-weight: #{$font-weight};
+//   }
+//   $font-weight: $font-weight - 100;
+// }
+
+.section-text-1 {
+  @include font-size-weight(28, 36, 500);
+}
+.section-text-2 {
+  @include font-size-weight(24, 36, 500);
+}
+.section-text-3 {
+  @include font-size-weight(20, 28, 500);
+}
+.section-text-4 {
+  @include font-size-weight(18, 26, 500);
+}
+.section-text-5 {
+  @include font-size-weight(16, 24, 500);
+}
+.section-text-6 {
+  @include font-size-weight(15, 22, 500);
+}
+.section-text-7 {
+  @include font-size-weight(14, 20, 500);
+}
+.section-text-8 {
+  @include font-size-weight(14, 18, 500);
+}
+.section-text-9 {
+  @include font-size-weight(20, 32, 500);
+}
+.section-text-10 {
+  @include font-size-weight(36, 42, 500);
+}
+.section-text-11 {
+  @include font-size-weight(24, 32, 500);
+}
+.section-text-12 {
+  @include font-size-weight(32, 38, 500);
+}
+.section-text-13 {
+  @include font-size-weight(12, 16, 500);
+}
+.section-text-14 {
+  @include font-size-weight(14, 20, 400);
+}
+.section-text-15 {
+  @include font-size-weight(12, 16, 600);
+}
+.section-text-16 {
+  @include font-size-weight(40, 42, 500);
+}
+.section-text-17 {
+  @include font-size-weight(16, 22, 500);
+}
+.section-text-18 {
+  @include font-size-weight(32, 40, 500);
+}
+.section-text-19 {
+  @include font-size-weight(15, 20, 500);
+}
+.section-text-20 {
+  @include font-size-weight(13, 16, 500);
+}
+
+.bold-text-1 {
+  @include font-size-weight(20, 24, 600);
+}
+.bold-text-2 {
+  @include font-size-weight(32, 40, 600);
+}
+.bold-text-48 {
+  @include font-size-weight(48, 56, 600);
+}
+
+.text-0 {
+  @include font-size(28, 36);
+}
+.text-1 {
+  @include font-size(18, 26);
+}
+.text-2 {
+  @include font-size(16, 24);
+}
+.text-2a {
+  @include font-size(16, 22);
+}
+.text-3 {
+  @include font-size(14, 22);
+}
+.text-4 {
+  @include font-size(13, 16);
+}
+.text-5 {
+  @include font-size(12, 18);
+}
+.text-6 {
+  @include font-size(13, 20);
+}
+.text-7 {
+  @include font-size(12, 20);
+}
+.text-8 {
+  @include font-size(14, 20);
+}
+.text-9 {
+  @include font-size(13, 18);
+}
+.text-10 {
+  @include font-size(12, 16);
+}
+.text-11 {
+  @include font-size(8, 9);
+}
+.text-12 {
+  @include font-size(11, 14);
+}
+.text-13 {
+  @include font-size(24, 32);
+}
+.text-14 {
+  @include font-size(14, 18);
+}
+.text-15 {
+  @include font-size(15, 20);
+}
+.text-16 {
+  @include font-size(15, 22);
+}
+.text-17 {
+  @include font-size(10, 12);
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-ucase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-medium-imp {
+  font-weight: 500 !important;
+}
+.text-semibold {
+  font-weight: 600;
+}
+.text-normal {
+  font-weight: 400;
+}
+.text-italic {
+  font-style: italic;
+}
+
+.text-disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.full-vh {
+  height: 100vh;
+}
+.full-h {
+  height: 100%;
+}
+.full-vw {
+  width: 100vw;
+}
+.full-w {
+  width: 100%;
+}
+.half-w {
+  width: 50%;
+}
+.full-w-i {
+  width: 100% !important;
+}
+.wv-center {
+  min-height: 100%;
+  @include display-flex;
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.d-none,
+.hidden {
+  display: none;
+}
+.v-hidden {
+  visibility: hidden;
+}
+.d-flex {
+  display: flex;
+}
+.d-block {
+  display: block;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-flex-c-s {
+  @include display-flex(center, space-between);
+}
+.d-flex-start-s {
+  @include display-flex(flex-start, space-between);
+}
+.d-flex-c-start {
+  @include display-flex(center, flex-start);
+}
+.d-flex-c-end {
+  @include display-flex(center, flex-end);
+}
+.d-flex-fs-stretch {
+  @include display-flex(stretch, flex-start);
+}
+.d-flex-c-c {
+  @include display-flex;
+}
+.row-wrap {
+  flex-flow: row wrap;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+
+.pos-rel {
+  position: relative;
+}
+.pos-fixed {
+  position: fixed !important;
+}
+.pos-center {
+  left: 50%;
+}
+.pos-abs {
+  position: absolute;
+}
+
+.cur-p {
+  cursor: pointer;
+  user-select: none;
+}
+.cur-disabled {
+  cursor: not-allowed;
+  user-select: none;
+}
+.cur-grab {
+  cursor: grab;
+  user-select: none;
+}
+.cur-grabbing {
+  cursor: grabbing;
+  user-select: none;
+}
+.cur-auto {
+  cursor: auto;
+  user-select: none;
+}
+.cur-default {
+  cursor: default;
+}
+
+.user-select-text {
+  user-select: text;
+}
+
+.underline {
+  text-decoration: underline;
+}
+.no-underline {
+  text-decoration: none !important;
+}
+
+.underline-h:hover {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.break-word {
+  word-break: break-all;
+}
+
+.word-break {
+  word-break: break-word;
+}
+
+.arial-font {
+  font-family: Arial;
+}
+
+.line-height-16 {
+  line-height: 16px !important;
+}
+
+label {
+  .checkbox-label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+}
+
+.label-radio {
+  margin: auto 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bg-orange {
+  background: #ee741f !important;
+}
+
+.blinker {
+  animation: blinker 1.5s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+}
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

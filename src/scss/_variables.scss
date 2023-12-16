@@ -1,0 +1,78 @@
+// Change variable from
+
+$eve-border-radius: 8px !default;
+$eve-box-shadow: 0 2px 6px #1a181e0a !default;
+$eve-border-radius-min: 4px !default;
+$border-color: #d9d9d9;
+:root {
+  --eve-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --eve-base-color: #1a181e;
+  --eve-base-secondary-color: #666666;
+  --eve-primary-color: #136be6;
+  --placeholder-color: #989898;
+  --eve-btn-font-size: 16px;
+  --eve-text-warning: #f4b815;
+  --eve-dropdown-hover-bg: rgba(0, 0, 0, 0.04) !important;
+  --eve-warning-color: #ee741f;
+  -webkit-font-smoothing: antialiased;
+  --eve-green-color: #0f9d58;
+  --eve-green-pale-color: #f0fff0;
+  --eve-red-color: #e50b20;
+  --eve-yellow-color: #f4b815;
+  --eve-primary-pale-color: #f3f8ff;
+  --eve-font-size: 16px;
+  --eve-border-color: rgba(0, 0, 0, 0.1);
+  --eve-box-shadow: 0 2px 6px #1a181e0a;
+  --eve-material-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  // Font-weights
+  --eve--border-radius-min: 4px;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --highlight-text-color: #136be6;
+  --primary-color: #136be6;
+  // Secondary font colors
+  --secondary-text-color: #e0e0e0;
+  // Border colors
+
+  --secondary-border-color: #eceff1;
+}
+
+$google-primary: #dd4b39;
+$google-hover: #cf4635;
+
+$facebook-primary: #1877f2;
+$facebook-secondary: #0169e1;
+$facebook-hover: #166dde;
+
+$sm-breakpoint: (
+  min-width: 576px,
+);
+$md-breakpoint: (
+  min-width: 768px,
+);
+$lg-breakpoint: (
+  min-width: 992px,
+);
+$xl-breakpoint: (
+  min-width: 1200px,
+);
+
+$sm-container-width: 540px;
+$md-container-width: 720px;
+$lg-container-width: 960px;
+$xl-container-width: 1140px;
+
+$sidebar-width: 224px;
+$toolbar-height: 64px;
+$notificationbar-height: 42px;
+
+$fixed-container-width: 1062px;
+$fixed-container-width-sm: 760px;
+
+$sm-breakpoint: "(min-width: 576px)";
+$md-breakpoint: "(min-width: 768px)";
+$lg-breakpoint: "(min-width: 992px)";
+$xl-breakpoint: "(min-width: 1200px)";
+$xxl-breakpoint: "(min-width: 1400px)";
+$xxxl-breakpoint: "(min-width: 1600px)";

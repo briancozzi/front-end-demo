@@ -1,0 +1,788 @@
+// Here you can add other styles
+body {
+  // font-family: Inter, "Source Sans Pro", Helvetica, Arial, sans-serif;
+  background: white !important;
+  // color: #183247;
+  color: #333333;
+  @media only screen and (max-width: 1024px) {
+    font-size: 13px !important;
+  }
+}
+.app,
+app-login,
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+*:focus {
+  outline: none !important;
+}
+input:focus {
+  // border: 1px solid #20a8d8;
+}
+
+.transition-300 {
+  transition: all ease-in-out 300ms;
+}
+
+.is-invalid {
+  position: relative;
+  animation: shake 0.1s linear;
+  animation-iteration-count: 3;
+}
+
+.is-invalid-ns {
+  border-color: red !important;
+  position: relative !important;
+}
+
+@keyframes shake {
+  0% {
+    left: -5px;
+  }
+
+  100% {
+    right: -5px;
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown {
+  &:hover {
+    .dropdown-menu {
+      display: block !important;
+    }
+  }
+}
+.pointer {
+  cursor: pointer !important;
+}
+.default {
+  cursor: default;
+}
+.overflow-hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a {
+  color: #333;
+}
+
+.cdk-overlay-container {
+  z-index: 9999999 !important;
+}
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 9999999 !important;
+}
+
+.owl-dt-popup-container {
+  font-size: 12px !important;
+}
+
+// .form-control[readonly] {
+//   background-color: white;
+// }
+
+.hint {
+  font-size: 14px;
+  line-height: 20px;
+  color: #6c757d;
+}
+
+.main .container-fluid {
+  padding: 0 !important;
+}
+
+.-m-10 {
+  margin: -10px;
+}
+
+// .form-control:focus {
+//   box-shadow: none !important;
+// }
+
+.hrefLink:hover {
+  text-decoration: underline !important;
+  cursor: pointer !important;
+  color: #284255 !important;
+}
+
+.table-Header {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 24px 0 16px;
+  color: #535766;
+}
+
+.green {
+  color: #0d6907;
+}
+
+.red {
+  color: #d31111;
+}
+
+.border-bottom-dashed {
+  border-bottom: 1px dashed #ddd;
+}
+.center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.ng-autocomplete {
+  width: 100% !important;
+}
+
+.p-r-0 {
+  padding-right: 0px;
+}
+
+.p-l-0 {
+  padding-left: 0px;
+}
+
+.grid-col-container {
+  // border-bottom: 1px solid #dfe3e6;
+  margin: 0 !important;
+  .grid-col {
+    // margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #dfe3e6;
+    padding: 0.75rem;
+    // &:nth-child(odd) {
+    //   border-left: 1px solid #dfe3e6;
+    //   border-top: 1px solid #dfe3e6;
+    // }
+    // &:nth-child(even) {
+    //   border-left: 1px solid #dfe3e6;
+    //   border-top: 1px solid #dfe3e6;
+    //   border-right: 1px solid #dfe3e6;
+    // }
+  }
+}
+
+// .action-icon-parent {
+//   .action-icon {
+//     cursor: pointer;
+//     color: #8c9398;
+//     opacity: 0.4;
+//     transition: all ease-in 0.3s;
+//   }
+//   &:hover {
+//     .action-icon {
+//       opacity: 1;
+//     }
+//     .action-icon-danger {
+//       color: red;
+//     }
+//   }
+// }
+
+// .custom-fade {
+//   -webkit-mask-image: -webkit-gradient(
+//     linear,
+//     left top,
+//     left bottom,
+//     from(rgba(0, 0, 0, 1)),
+//     to(rgba(0, 0, 0, 0))
+//   );
+// }
+
+.custom-asidebar-hide {
+  .custom-asidebar {
+    right: -433px !important;
+  }
+}
+.w-10p {
+  width: 10%;
+}
+.w-20p {
+  width: 20%;
+}
+.w-30p {
+  width: 30%;
+}
+.w-40p {
+  width: 40%;
+}
+.w-50p {
+  width: 50%;
+}
+.w-60p {
+  width: 60%;
+}
+.w-70p {
+  width: 70%;
+}
+.w-80p {
+  width: 80%;
+}
+.w-90p {
+  width: 90%;
+}
+
+.w-5p {
+  width: 5%;
+}
+.w-100px {
+  width: 100px;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.custom-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-weight: 400;
+  // border-top-left-radius: 0.3rem;
+  // border-top-right-radius: 0.3rem;
+  // color: #ffffff;
+  color: white;
+  padding: 0.4rem 0.25rem;
+  font-size: 1rem;
+  // border-radius: 0px;
+  // background-color: #2673af;
+}
+
+.btn-foursquare {
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.create {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.max-one-line-text {
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.max-two-line-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.required:after {
+  content: " *";
+  color: red;
+}
+
+button:disabled,
+button[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.datepicker-today {
+  border: 1px solid;
+}
+
+.list {
+  margin: 8px;
+}
+
+.filter {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.input-group {
+  height: 40px;
+}
+.inner-addon {
+  position: relative;
+  width: 426px;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 13px;
+  color: #787b7d;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon {
+  left: 0px;
+}
+.right-addon .glyphicon {
+  right: 0px;
+}
+
+/* add padding  */
+.left-addon input {
+  height: 34px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: $eve-box-shadow;
+}
+.right-addon input {
+  padding-right: 30px;
+}
+.fs-12 {
+  font-size: 12px !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+.fs-15 {
+  font-size: 15px !important;
+}
+
+.fs-16 {
+  font-size: 16px !important;
+}
+.fs-18 {
+  font-size: 18px !important;
+}
+.fs-20 {
+  font-size: 20px !important;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.vertically-center {
+  margin: auto 0;
+}
+
+.notice {
+  background-color: #fded9d66;
+  border: 2px solid #ffee994f;
+  color: #525252;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+}
+
+.empty {
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.border-r-50-p {
+  border-radius: 50% !important;
+}
+
+.flex {
+  margin-bottom: 0px !important;
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+.b-12-shadow {
+  box-shadow: 0px 3px 8px 2px rgb(33 32 32 / 20%);
+  border-radius: 12px;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ngx-pagination {
+  margin-bottom: 0px !important;
+}
+
+.width_max_content {
+  width: max-content;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+// label {
+//   color: #73818f !important;
+// }
+
+.ngx-pagination {
+  padding-left: 0 !important;
+}
+
+p {
+  margin: 0 0 10px;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  // color: red;
+}
+input {
+  outline: none !important;
+}
+
+.inline-grid {
+  display: inline-grid;
+}
+
+.commission-pop-over {
+  box-shadow: 0px 0px 8px -1px rgb(0 0 0 / 75%);
+  width: 250px;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.bs-datepicker-head {
+  background-color: var(--eve-green-color);
+  border-radius: 0px;
+  margin-right: 4px;
+}
+.bs-datepicker .bs-media-container {
+  gap: 6px;
+}
+.bs-datepicker-body table th {
+  color: rgb(119, 119, 119);
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+.bs-datepicker-body table.days span {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+.bs-datepicker-body table td:before,
+.bs-datepicker-body table td span:before {
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+}
+.bs-datepicker-body table td span.selected {
+  background-color: #5cb85c;
+  border-radius: 0;
+}
+.bs-datepicker-body table td span {
+  margin: 0;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+::ng-deep {
+  /* to penetrate <ngx-editor> CSS styling */
+
+  .NgxEditor {
+    overflow-y: scroll;
+    p {
+      color: var(--eve-base-color);
+      font-size: 14px;
+    }
+  }
+
+  .NgxEditor__Content {
+    padding: 12px 16px !important;
+  }
+}
+
+.amenities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  .amenity {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 8px;
+    .fa {
+      font-size: 20px !important;
+    }
+  }
+}
+
+.rotate-180 {
+  transition: 500ms ease all;
+  transform: rotate(180deg);
+}
+
+.h-500px {
+  height: 500px;
+}
+
+.form-group {
+  .input-with-loader {
+    position: relative;
+    .input-loader {
+      position: absolute;
+      top: 15px;
+      right: 16px;
+    }
+  }
+}
+
+.p-tiered-menu-header-left {
+  left: 84% !important;
+  top: 76px !important;
+  position: fixed !important;
+  display: block !important;
+  .log-out {
+    .pi-menu-icon {
+      color: var(--eve-red-color) !important;
+    }
+    .p-menuitem-text {
+      color: var(--eve-red-color) !important;
+      .pi {
+      }
+    }
+  }
+}
+
+.p-tiered-menu-google-connect {
+  left: 145px !important;
+  top: 49px !important;
+  display: block !important;
+}
+
+.text-primary-hover {
+  &:hover {
+    color: var(--eve-primary-color);
+    cursor: pointer;
+  }
+}
+
+.trim-long-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.angular-editor {
+  .angular-editor-toolbar {
+    // font: inherit !important;
+    // font-size: 12px !important;
+    // padding: 8px !important;
+    border-radius: 4px;
+    .angular-editor-toolbar-set {
+      .ae-font .ae-picker-label {
+        // height: 41px !important;
+        // font-size: 14px !important;
+      }
+      .angular-editor-button {
+        // font-size: 16px;
+        // padding: 8px 12px !important;
+        // margin-right: 6px;
+      }
+    }
+  }
+
+  .angular-editor-textarea {
+    border-radius: 4px;
+    // padding: 32px 32px !important;
+    h4 {
+      margin-bottom: 16px;
+    }
+    ul {
+      list-style: auto;
+      margin-left: 32px;
+      li {
+        margin-bottom: 12px;
+        margin-left: 16px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.p-inputtext-sm {
+  .p-inputtext {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+  }
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.time-line {
+  // border-left: 1px solid #dee2e6 !important;
+  flex-direction: row;
+  width: 463px;
+  display: flex;
+  & > div:last-child {
+    &.time-line-event {
+      .time-line-seperator {
+        .time-line-connector {
+          display: none;
+        }
+      }
+    }
+  }
+  .time-line-event {
+    flex-direction: column;
+    flex: 1;
+    display: flex;
+    position: relative;
+    min-height: 70px;
+    // margin-bottom: 40px;
+
+    .time-line-opposite {
+      // padding: 1rem 0;
+      .time-line-marker-name {
+        font-weight: 500;
+      }
+    }
+    .time-line-seperator {
+      flex-direction: row;
+      flex: 0;
+      display: flex;
+      align-items: center;
+      margin: 16px 0 8px 0;
+      .time-line-marker {
+        border: 2px solid var(--eve-primary-color);
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        // background-color: #dee2e6;
+        .is-icon {
+          display: none;
+        }
+      }
+      .time-line-connector {
+        border: 1px dashed #dee2e6;
+        // height: 2px;
+        width: 100%;
+        // background-color: #dee2e6;
+      }
+    }
+    .time-line-content {
+      // padding: 8px 0;
+      .date {
+        font-size: 11px;
+        font-weight: 500;
+        color: #707070;
+        // color: #909090;
+      }
+      .name {
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+    &.time-line-completed {
+      .time-line-seperator {
+        .time-line-marker {
+          background-color: var(--eve-primary-color) !important;
+          .is-icon {
+            display: block;
+          }
+        }
+        .time-line-connector {
+          border: 0px !important;
+          height: 2px;
+          background: var(--eve-primary-color) !important;
+        }
+      }
+    }
+    &.time-line-partial {
+      .time-line-seperator {
+        .time-line-marker {
+          background-color: var(--eve-primary-color) !important;
+          .is-icon {
+            display: block;
+          }
+        }
+        .time-line-connector {
+          border: 0px !important;
+          height: 2px;
+          background: linear-gradient(
+            90deg,
+            var(--eve-primary-color) 50%,
+            #dee2e6 50%
+          ) !important;
+        }
+      }
+    }
+  }
+}
+
+.usassigned-tiered-menu {
+  p-tieredmenusub {
+    ul {
+      li {
+        a {
+          &.p-menuitem-link {
+            padding: 14px;
+            font-size: 13px;
+          }
+        }
+        .p-submenu-list {
+          max-height: 150px;
+          overflow: auto;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+.text-orange {
+  color: var(--eve-warning-color);
+  font-weight: 500;
+}
+
+.customized-timeline {
+  .p-timeline-event-marker {
+    border-radius: 50%;
+    padding: 12px 14px;
+  }
+}
+
+.tab-view-padding-0px {
+  .p-tabview-panels {
+    padding: 0 !important;
+  }
+}

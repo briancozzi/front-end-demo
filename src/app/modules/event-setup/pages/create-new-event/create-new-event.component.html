@@ -1,0 +1,35 @@
+<div class="create-new-event container mt-32px">
+  <div class="fw-500 text-secondary fs-16 mb-8px">
+    Step {{ completedSteps }} of 4
+  </div>
+  <div class="event-steppers">
+    @for (hero of getSteppers(); track hero; let index = $index ) {
+    <div
+      class="event-stepper"
+      [ngClass]="{ 'is-stepper-completed': completedSteps >= index + 1 }"
+    ></div>
+    }
+  </div>
+  <div class="stepper-content">
+    <div><h1 class="fs-3 fw-600">What is the name of your event?</h1></div>
+    <form #taxForm="ngForm" class="mb-24px">
+      <div class="row mt-24px">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <!-- <label class="required">Name</label> -->
+            <input
+              type="text"
+              name="name"
+              class="form-control form-shadow"
+              placeholder="Name your event"
+              required
+              [(ngModel)]="event.name"
+              maxlength="20"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+    <div><button class="eve-btn eve-btn-primary">Next</button></div>
+  </div>
+</div>

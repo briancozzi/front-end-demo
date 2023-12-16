@@ -1,0 +1,16 @@
+// If you want to override variables do it here
+@import "variables";
+@import "mixins";
+@import "reset";
+
+// Import styles
+// If you want to add something do it here
+@import "primeng/resources/primeng.css";
+@import "./prime-ng/prime-ng";
+@import "buttons";
+@import "modal";
+@import "margins";
+@import "paddings";
+@import "forms";
+@import "base";
+@import "custom";

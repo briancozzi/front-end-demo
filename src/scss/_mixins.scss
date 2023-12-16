@@ -1,0 +1,304 @@
+@mixin eventlify-base {
+  font-size: 16px !important;
+  color: var(--eve-base-color);
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  ::-webkit-scrollbar {
+    width: 3px !important;
+    height: 8px;
+  }
+}
+
+@mixin eventlify-primary-color {
+  color: #00509d;
+}
+
+@mixin eventlify-placeholder {
+  color: #989898;
+  font-size: 14px;
+  opacity: 1;
+}
+
+@mixin eventlify-card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px #1a181e0a;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@mixin label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4d4d4d;
+  margin-bottom: 8px;
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == desk) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tab) {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == phone_lg) {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == phone) {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == phone_sm) {
+    @media (max-width: 480.98px) {
+      @content;
+    }
+  }
+}
+
+@mixin material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+@mixin display-flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font-size($size, $line-height) {
+  font-size: #{$size}px;
+  line-height: #{$line-height}px;
+}
+
+@mixin font-size-weight($size, $line-height, $weight) {
+  font-size: #{$size}px;
+  line-height: #{$line-height}px;
+  font-weight: $weight;
+}
+
+@mixin content-size($width, $height) {
+  width: #{$width}px;
+  height: #{$height}px;
+}
+
+@mixin circle($size, $bg: #fff) {
+  width: $size;
+  height: $size;
+  background-color: $bg;
+  -webkit-border-radius: $size/2;
+  -moz-border-radius: $size/2;
+  border-radius: $size/2;
+}
+
+@mixin box-style {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px 0 rgba(26, 24, 30, 0.04);
+  background-color: #ffffff;
+}
+
+@mixin grid($space) {
+  .grid-#{$space} {
+    display: grid;
+    grid-column: auto;
+    gap: #{$space}px;
+  }
+}
+
+@mixin spacing($space) {
+  .pl#{$space} {
+    padding-left: #{$space}px;
+  }
+  .ml#{$space} {
+    margin-left: #{$space}px;
+  }
+  .ml#{$space}-i {
+    margin-left: #{$space}px !important;
+  }
+  .pr#{$space} {
+    padding-right: #{$space}px !important;
+  }
+  .mr#{$space} {
+    margin-right: #{$space}px !important;
+  }
+  .pt#{$space} {
+    padding-top: #{$space}px;
+  }
+  .mt#{$space} {
+    margin-top: #{$space}px;
+  }
+  .mt#{$space}-i {
+    margin-top: #{$space}px !important;
+  }
+  .pb#{$space} {
+    padding-bottom: #{$space}px;
+  }
+  .pb#{$space}-i {
+    padding-bottom: #{$space}px !important;
+  }
+  .mb#{$space} {
+    margin-bottom: #{$space}px;
+  }
+  .mb#{$space}-i {
+    margin-bottom: #{$space}px !important;
+  }
+  .my#{$space} {
+    margin-top: #{$space}px;
+    margin-bottom: #{$space}px;
+  }
+  .mx#{$space} {
+    margin-left: #{$space}px;
+    margin-right: #{$space}px;
+  }
+  .py#{$space} {
+    padding-top: #{$space}px;
+    padding-bottom: #{$space}px;
+  }
+  .px#{$space} {
+    padding-left: #{$space}px;
+    padding-right: #{$space}px;
+  }
+  .p#{$space} {
+    padding: #{$space}px;
+  }
+  .p#{$space}-i {
+    padding: #{$space}px !important;
+  }
+  .m#{$space} {
+    margin: #{$space}px;
+  }
+  .-m#{$space} {
+    margin: -#{$space}px;
+  }
+  .gap#{$space} {
+    gap: #{$space}px;
+  }
+}
+
+@mixin alert-style($color) {
+  color: $color;
+  background-color: rgba($color, 0.1);
+  padding: 10px 16px;
+  border-radius: 3px;
+  @include font-size(14, 22);
+}
+
+@mixin anchor-link($color, $hoverColor) {
+  color: $color;
+  cursor: pointer;
+  overflow: hidden;
+  &.underline {
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $hoverColor;
+    &.underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin split-color-bg($color1, $color1size, $color2, $color2size, $angle) {
+  background: -webkit-linear-gradient(
+    $angle,
+    $color1 $color1size,
+    $color2 $color2size
+  );
+  background: -o-linear-gradient(
+    $angle,
+    $color1 $color1size,
+    $color2 $color2size
+  );
+  background: -moz-linear-gradient(
+    $angle,
+    $color1 $color1size,
+    $color2 $color2size
+  );
+  background: linear-gradient($angle, $color1 $color1size, $color2 $color2size);
+}
+
+@mixin backgroundImage($imgpath, $position: 0 0, $repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+  }
+}
+
+.mr-70 {
+  margin-right: 70px;
+}
+
+@mixin maxWidth($size) {
+  .max-w-#{$size} {
+    max-width: $size * 1px;
+  }
+}
+@mixin dynamicMaxWidths($size-list) {
+  @each $size in $size-list {
+    @include maxWidth($size);
+  }
+}
+
+@mixin d-grid(
+  $col: auto,
+  $row: auto,
+  $gap: 0,
+  $align: center,
+  $justify: center
+) {
+  display: grid;
+  grid-template-columns: $col;
+  grid-template-rows: $row;
+  gap: $gap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin calculated-spacer($grow: 1, $shrink: 1, $basis: auto) {
+  flex: $grow $shrink $basis;
+}
+
+@mixin input-box-border {
+  color: var(--eve-base-color);
+  background-color: #fff;
+  border-color: var(--eve-primary-color) !important;
+  outline: 0;
+  box-shadow: none;
+}

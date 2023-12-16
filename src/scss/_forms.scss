@@ -1,0 +1,122 @@
+.form-group {
+  margin-bottom: 24px;
+  &.form-group-field {
+    p {
+      font-size: 16px !important;
+      color: var(--eve-base-color);
+      font-weight: 500 !important;
+      margin-top: -4px !important;
+    }
+  }
+
+  input,
+  textarea {
+    &:-webkit-autofill::first-line,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill::first-line,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      font-size: 16px !important;
+    }
+    border-radius: 4px;
+    padding: 12px 16px;
+    border: 1px solid $border-color;
+    // width: 100%;
+    color: #1a181e;
+    font-size: 16px;
+    line-height: 24px;
+    height: 48px;
+    box-shadow: none;
+    &:focus {
+      color: var(--eve-base-color);
+      background-color: #fff;
+      border-color: var(--eve-primary-color);
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--placeholder-color);
+    opacity: 1; /* Firefox */
+    font-size: 16px;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--placeholder-color);
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--placeholder-color);
+  }
+
+  .form-control {
+    width: -webkit-fill-available;
+    &.form-shadow {
+      border-radius: 2px !important;
+      border: none !important;
+      box-shadow: 00px 0px 18px 0px rgba(0, 0, 0, 0.15) !important;
+      padding: 16px 24px;
+      font-size: 18px !important;
+      height: 60px;
+      & > ::placeholder {
+        font-size: 18px !important;
+      }
+    }
+  }
+  .form-control-sm {
+    padding: 8px;
+    height: 43px;
+    font-size: 14px;
+  }
+}
+
+.form-group {
+  .form-inline-wrapper {
+    &.disabled {
+      background: #eaecef;
+      cursor: not-allowed;
+    }
+    display: flex;
+    border: 1px solid $border-color !important;
+    border-radius: $eve-border-radius-min;
+    &:focus-within {
+      @include input-box-border();
+    }
+
+    .form-inline-icon-wrapper {
+      &.left {
+        min-width: 151px;
+        border-top-left-radius: $eve-border-radius-min;
+        border-bottom-left-radius: $eve-border-radius-min;
+        padding: 12px 0px 12px 16px;
+        order: 0;
+        .form-inline-icon {
+          border-right: 1px solid $border-color;
+          padding-right: 16px;
+        }
+      }
+      &.right {
+        min-width: 151px;
+        padding: 12px 16px;
+        order: 1;
+        border-top-right-radius: $eve-border-radius-min;
+        border-bottom-right-radius: $eve-border-radius-min;
+        .form-inline-icon {
+          padding-left: 16px;
+          border-left: 1px solid $border-color;
+        }
+      }
+    }
+    .input-wrapper {
+      flex-grow: 1;
+      input {
+        height: 45px !important;
+        border: 0;
+      }
+    }
+  }
+}

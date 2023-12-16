@@ -21,7 +21,27 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@services": [
+          "./src/app/services"
+        ],
+        "@pipes": [
+          "./src/app/shared/pipes"
+        ],
+        "@interceptors": [
+          "./src/app/shared/interceptors"
+        ],
+        "@shared-components": [
+          "./src/app/shared/components"
+        ],
+        "@utilities": [
+          "./src/app/shared/utilities"
+        ],
+        "@directives": [
+          "./src/app/shared/directives"
+        ],
+  }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,0 +1,156 @@
+.eve-btn {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 7px 24px;
+  border: solid 1px rgba(0, 0, 0, 0);
+  text-align: center;
+  outline: none;
+  border: none !important;
+  height: 100%;
+  // padding: 10px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  min-width: 120px;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  &.eve-btn-primary {
+    background-color: var(--eve-primary-color) !important;
+    color: white;
+  }
+  &.eve-btn-secondary {
+    background-color: #d7d7d7;
+    font-weight: 500;
+    color: var(--eve-base-color);
+    &:hover {
+      background-color: #b5b5b5;
+    }
+  }
+  // Icons
+  i {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  // On button hover
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:active {
+    top: 1px;
+  }
+
+  // Border Radius
+  &.br-40px {
+    border-radius: 40px;
+  }
+
+  // Disable button
+  &:disabled {
+    opacity: 0.6;
+    box-shadow: none !important;
+    &:hover {
+      filter: none;
+    }
+  }
+
+  /** Button classes */
+  // Flat button
+
+  // &.eve-btn-secondary {
+  //   background-color: #f8f8f8;
+  //   box-shadow: none;
+  //   border: 1px solid var(--secondary-text-color);
+  //   &:hover {
+  //     filter: brightness(95%) !important;
+  //   }
+  // }
+
+  // Success
+  &.eve-btn-success {
+    background-color: var(--eve-green-color);
+    color: white;
+  }
+
+  &.eve-btn-warning {
+    background-color: #f4b815;
+    &:hover {
+      background-color: #d39b00;
+    }
+    // color: white;
+  }
+
+  // Success
+
+  &.eve-btn-danger {
+    background-color: var(--eve-red-color);
+    color: white;
+    &:hover {
+      background-color: var(--eve-red-color);
+    }
+  }
+
+  &.eve-btn-danger-outline {
+    background-color: white;
+    border: 1px solid var(--eve-red-color) !important;
+    color: var(--eve-red-color);
+    &:hover {
+      background-color: var(--eve-red-color);
+      color: white;
+    }
+  }
+
+  &.eve-btn-sm {
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+    min-width: 90px;
+  }
+
+  // &.eve-btn-secondary {
+  //   background-color: #ed741f;
+  //   font-weight: 500;
+  //   color: #fff;
+  // }
+}
+
+.eve-btn-outline-light {
+  background: white;
+  border: 1px solid #cecece !important;
+  &:hover {
+    border: 1px solid #cecece !important;
+    background: #e1e1e1 !important;
+  }
+}
+
+.eve-btn-warning-2 {
+  background-color: var(--eve-warning-color) !important;
+  border: 1px solid var(--eve-warning-color) !important;
+  color: white;
+  &:hover {
+    color: #fff;
+    background-color: #cc631b !important;
+    transition: 0.15s ease-in-out;
+  }
+}
+
+.eve-btn-sm {
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.15s ease-in-out;
+  background-color: #0000;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #fff;
+  border-color: #d9d9d9;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 7px 20px;
+  border-radius: 4px;
+  height: min-content;
+  border: 1px solid #d6d6d6;
+  &:hover {
+    // opacity: 0.8;
+    background-color: #f7f7f7;
+  }
+}
