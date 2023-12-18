@@ -7043,3 +7043,46 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
     font-weight: 600;
   }
 }
+
+.p-dropdown-shadow {
+  .p-dropdown {
+    border-radius: 2px !important;
+    border: none !important;
+    box-shadow: 0px 0px 9px 1px #ededed !important;
+    background-color: white;
+    cursor: pointer;
+  }
+  .p-placeholder {
+    font-size: 14px !important;
+    font-family: "Montserrat", sans-serif !important;
+  }
+  .p-icon-wrapper {
+    color: var(--eve-primary-color);
+    font-weight: 600;
+  }
+}
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.p-input-icon-left > i:first-of-type {
+  padding-top: 1px !important;
+  font-weight: 500;
+  color: black;
+}
+
+.p-disabled,
+.p-component:disabled {
+  cursor: not-allowed;
+  background-color: #e9ecef !important;
+  opacity: 1;
+}
+.p-input-icon-left {
+  width: 100% !important;
+}
+.p-datepicker-calendar-container {
+  .p-disabled {
+    background-color: white !important;
+    color: #cdcdcd !important;
+  }
+}

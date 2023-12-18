@@ -13,8 +13,13 @@
             placeholder="Name your event"
             required
             [(ngModel)]="event.name"
-            maxlength="20"
+            maxlength="75"
           />
+          <div class="text-right mt-8px">
+            <span class="text-secondary fs-14 fw-500">
+              {{ event.name?.length ? event.name.length : 0 }}/75</span
+            >
+          </div>
         </div>
       </div>
     </div>

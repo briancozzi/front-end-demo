@@ -1,0 +1,161 @@
+<div class="create-event-step-four">
+  <h1 class="fs-3 fw-600 text-center mb-32px">Reception Ticket</h1>
+  <p class="text-center">
+    <span class="fw-500 text-black">
+      Is there a separate reception ticket available at your event?</span
+    >
+    <br />
+    <span class="text-primary fw-500">(e.g. Luncheon, Awards Dinner)</span>
+    <br />
+  </p>
+  <div class="mt-16px center text-center">
+    <p class="w-4 fs-12">
+      <span class="w-4"
+        ><span class="text-italic fw-500 text-black">Note: </span>
+        <span class="text-italic">
+          Do not include sponsorship packages. Consider this a sub-event of your
+          main event.</span
+        ></span
+      >
+    </p>
+  </div>
+  <form #eventStepFourForm="ngForm" class="mb-24px">
+    <div class="row mt-24px">
+      <div class="col-md-12 mt-32px center">
+        <div class="flex flex-wrap gap-4 center">
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="single"
+              [value]="true"
+              [(ngModel)]="event.isSponsorship"
+              id="single"
+              (onClick)="onLocationChange()"
+            ></p-radioButton>
+            <label for="single" class="ml-8px mb-0 fs-16">Yes</label>
+          </div>
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="isSponsorship"
+              [value]="false"
+              [(ngModel)]="event.isSponsorship"
+              id="isSponsorship"
+              (onClick)="onLocationChange()"
+            ></p-radioButton>
+            <label for="isSponsorship" class="ml-8px mb-0 fs-16">No</label>
+          </div>
+        </div>
+      </div>
+      @if (true) {
+      <div class="mt-32px">
+        @for (ticket of event.tickets; track index; let index = $index) {
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group mb-12px">
+              <label class="required">Name of Reception Ticket</label>
+              <div class="form-inline-wrapper form-shadow">
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    [name]="'ticket' + index"
+                    [disabled]="!event.isSponsorship"
+                    class="form-control"
+                    required
+                    [(ngModel)]="ticket.name"
+                    [placeholder]="'Ticket Name'"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group mb-12px">
+              <label class="required">Price</label>
+              <div class="form-inline-wrapper form-shadow">
+                @if (event.tickets.length > 1 && index > 0) {
+                <div class="form-inline-icon-wrapper right">
+                  <div class="form-inline-icon text-danger pointer center">
+                    <span (click)="removeLocation(index)" class="center">
+                      <i class="pi pi-times fs-20px mr-0 fw-bolder"></i
+                      ><span class="fs-14"></span
+                    ></span>
+                  </div>
+                </div>
+                }
+                <div class="input-wrapper">
+                  <span class="p-input-icon-left">
+                    <i class="pi pi-dollar fs-14"></i>
+                    <input
+                      type="text"
+                      pInputText
+                      [name]="'price' + index"
+                      [disabled]="!event.isSponsorship"
+                      class="form-control pl-32px"
+                      required
+                      [(ngModel)]="ticket.price"
+                      [placeholder]="'0.00'"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <hr class="d-sm-block" /> -->
+        } @if (event.isSponsorship) {
+        <button
+          class="eve-btn eve-btn-primary-outline eve-btn-sm mr-16px w-100 center"
+          (click)="addTicket()"
+          [disabled]="event.isLocation"
+        >
+          <i class="pi pi-plus"></i>Add Reception
+        </button>
+        }
+      </div>
+      }
+    </div>
+  </form>
+  <div class="center">
+    <div>
+      <button
+        class="eve-btn eve-btn-primary-outline mt-32px mr-16px"
+        (click)="back()"
+      >
+        Back
+      </button>
+      <button
+        class="eve-btn eve-btn-primary mt-32px"
+        [disabled]="!eventStepFourForm.valid"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+
+<p-confirmDialog #cd>
+  <ng-template pTemplate="headless" let-message>
+    <div
+      class="flex flex-column align-items-center surface-overlay border-round p-24px"
+    >
+      <span class="fs-16 fw-500"
+        >Are you sure you want to delete this ticket?</span
+      >
+      <div class="flex align-items-center gap-2 mt-4">
+        <button
+          label="Save"
+          (click)="cd.accept()"
+          class="eve-btn eve-btn-primary mr-16px"
+        >
+          Confirm
+        </button>
+        <button
+          label="Cancel"
+          (click)="cd.reject()"
+          class="eve-btn eve-btn-outline-light"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </ng-template>
+</p-confirmDialog>

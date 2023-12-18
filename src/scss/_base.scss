@@ -1116,3 +1116,10 @@ label {
 hr {
   border: 1.5px solid rgb(107, 107, 107) !important;
 }
+
+@media screen and (max-width: 736) {
+  .d-sm-block {
+    display: block;
+    visibility: hidden;
+  }
+}

@@ -59,9 +59,13 @@
 }
 
 .pl-32px {
-  padding-left: 32px;
+  padding-left: 32px !important;
 }
 
 .pb-32px {
   padding-bottom: 32px;
+}
+
+.pt-2px {
+  padding-top: 2px;
 }

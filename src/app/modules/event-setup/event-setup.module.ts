@@ -17,6 +17,9 @@ import {
   ConfirmationModalComponent,
 } from '../../shared/components/modals';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { CreateEventStepFourComponent } from './components/create-event-step-four/create-event-step-four.component';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
 
 const PAGES = [CreateNewEventComponent];
 const CONTAINERS = [CreateEventStepsComponent];
@@ -24,6 +27,7 @@ const COMPONENTS = [
   CreateEventStepOneComponent,
   CreateEventStepTwoComponent,
   CreateEventStepThreeComponent,
+  CreateEventStepFourComponent,
 ];
 
 const STANDALONES_COMP = [ConfirmationModalComponent, BaseModalComponent];
@@ -32,6 +36,8 @@ const LIB_MODULES = [
   ConfirmPopupModule,
   CalendarModule,
   ConfirmDialogModule,
+  DropdownModule,
+  InputTextModule,
 ];
 
 @NgModule({
