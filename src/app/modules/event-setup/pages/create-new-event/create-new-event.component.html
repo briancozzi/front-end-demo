@@ -1,35 +1,30 @@
-<div class="create-new-event container mt-32px">
-  <div class="fw-500 text-secondary fs-16 mb-8px">
-    Step {{ completedSteps }} of 4
+<div class="create-new-event mb-24px">
+  <div class="create-new-event-header center">
+    <div class=""><img src="assets/images/svgs/eve-full-logo-light.png" /></div>
   </div>
-  <div class="event-steppers">
-    @for (hero of getSteppers(); track hero; let index = $index ) {
-    <div
-      class="event-stepper"
-      [ngClass]="{ 'is-stepper-completed': completedSteps >= index + 1 }"
-    ></div>
-    }
-  </div>
-  <div class="stepper-content">
-    <div><h1 class="fs-3 fw-600">What is the name of your event?</h1></div>
-    <form #taxForm="ngForm" class="mb-24px">
-      <div class="row mt-24px">
-        <div class="col-sm-12">
-          <div class="form-group">
-            <!-- <label class="required">Name</label> -->
-            <input
-              type="text"
-              name="name"
-              class="form-control form-shadow"
-              placeholder="Name your event"
-              required
-              [(ngModel)]="event.name"
-              maxlength="20"
-            />
-          </div>
+  <div
+    class="create-new-event-content container"
+    [ngClass]="{ center: isGetStarted }"
+  >
+    @if (isGetStarted) {
+    <div class="eve-get-started">
+      <div>
+        <div class="img-wrapper shadow">
+          <img src="assets/images/svgs/eve-logo-mini.svg" alt="" />
+        </div>
+        <h2>Welcome to Eventlify</h2>
+        <p>Post, promote and manage your event with ease</p>
+        <div class="mt-72px center">
+          <button class="eve-btn eve-btn-primary" (click)="onGetStarted()">
+            Get started
+          </button>
         </div>
       </div>
-    </form>
-    <div><button class="eve-btn eve-btn-primary">Next</button></div>
+    </div>
+    }@else {
+    <div class="center mt-120px">
+      <app-create-event-steps></app-create-event-steps>
+    </div>
+    }
   </div>
 </div>

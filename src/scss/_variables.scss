@@ -5,18 +5,18 @@ $eve-box-shadow: 0 2px 6px #1a181e0a !default;
 $eve-border-radius-min: 4px !default;
 $border-color: #d9d9d9;
 :root {
-  --eve-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --eve-font-family: "Montserrat";
+  // --eve-font-family: url("/assets/fonts/Montserrat/static/Montserrat-Medium.ttf");
   --eve-base-color: #1a181e;
   --eve-base-secondary-color: #666666;
-  --eve-primary-color: #136be6;
+  --eve-primary-color: #3f7a7a;
   --placeholder-color: #989898;
   --eve-btn-font-size: 16px;
   --eve-text-warning: #f4b815;
   --eve-dropdown-hover-bg: rgba(0, 0, 0, 0.04) !important;
   --eve-warning-color: #ee741f;
   -webkit-font-smoothing: antialiased;
-  --eve-green-color: #0f9d58;
+  --eve-green-color: #7dbb46;
   --eve-green-pale-color: #f0fff0;
   --eve-red-color: #e50b20;
   --eve-yellow-color: #f4b815;

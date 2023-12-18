@@ -1,0 +1,25 @@
+.create-event-steps {
+  .event-steppers {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: 60px;
+    .event-stepper {
+      height: 4px;
+      background-color: #eeeeee;
+      width: 200px;
+      border-radius: 25px;
+      &.is-stepper-completed {
+        background-color: var(--eve-green-color);
+      }
+    }
+  }
+  form {
+    margin-top: 48px;
+  }
+  width: 630px;
+  @media screen and (max-width: 680px) {
+    width: 100vw;
+    padding: 0 24px;
+  }
+}

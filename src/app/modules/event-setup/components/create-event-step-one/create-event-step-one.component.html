@@ -1,0 +1,31 @@
+<div class="create-event-step-one">
+  <h1 class="fs-3 fw-600 text-left text-center">
+    What is the name of your event?
+  </h1>
+  <form #eventStepOneForm="ngForm" class="mb-24px">
+    <div class="row mt-24px">
+      <div class="col-sm-12 mt-32px">
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            class="form-control form-shadow"
+            placeholder="Name your event"
+            required
+            [(ngModel)]="event.name"
+            maxlength="20"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <button
+        class="eve-btn eve-btn-primary mt-32px"
+        (click)="next()"
+        [disabled]="eventStepOneForm.invalid"
+      >
+        Next
+      </button>
+    </div>
+  </form>
+</div>

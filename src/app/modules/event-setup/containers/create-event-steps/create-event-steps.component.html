@@ -1,0 +1,37 @@
+<div class="create-event-steps">
+  <div>
+    <div class="fw-500 text-secondary fs-16 mb-8px">
+      Step {{ completedSteps }} of 4
+    </div>
+    <div class="event-steppers">
+      @for (hero of getSteppers(); track hero; let index = $index ) {
+      <div
+        class="event-stepper"
+        [ngClass]="{ 'is-stepper-completed': completedSteps >= index + 1 }"
+      ></div>
+      }
+    </div>
+    <div class="stepper-content" style="padding-top: 16px">
+      @switch (completedSteps) { @case (1) {
+      <app-create-event-step-one
+        (OnNext)="onNext($event)"
+      ></app-create-event-step-one>
+      } @case (2) {
+      <app-create-event-step-two
+        (OnNext)="onNext($event)"
+        (OnBack)="onBack()"
+      ></app-create-event-step-two>
+      } @case (3) {
+      <app-create-event-step-three
+        (OnNext)="onNext($event)"
+        (OnBack)="onBack()"
+      ></app-create-event-step-three>
+      }@case (4) {
+      <app-create-event-step-three
+        (OnNext)="onNext($event)"
+        (OnBack)="onBack()"
+      ></app-create-event-step-three>
+      } }
+    </div>
+  </div>
+</div>

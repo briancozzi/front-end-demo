@@ -1,0 +1,137 @@
+<div class="create-event-step-two">
+  <h1 class="fs-3 fw-600 text-center mb-32px">When is your event?</h1>
+  <form #eventStepThreeForm="ngForm" class="mb-24px">
+    <div class="row mt-32px">
+      <div class="col-md-6 col-sm-12">
+        <div class="form-group">
+          <label class="required">Event Starts</label>
+          <p-calendar
+            [required]="true"
+            [name]="'eventStart'"
+            dateFormat="dd / mm / yy"
+            class="p-input-shadow"
+            [(ngModel)]="event.startDate"
+            [iconDisplay]="'input'"
+            [showIcon]="true"
+          ></p-calendar>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="form-group">
+          <label class="required">Start Time</label>
+          <p-calendar
+            [required]="true"
+            [name]="'eventStart'"
+            class="p-input-shadow"
+            dateFormat="hh:mm a"
+            [(ngModel)]="event.startTime"
+            [iconDisplay]="'input'"
+            hourFormat="12"
+            [timeOnly]="true"
+            [stepMinute]="10"
+            [showIcon]="false"
+          ></p-calendar>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-24px">
+      <div class="col-md-6 col-sm-12">
+        <div class="form-group">
+          <label class="required">Event Ends</label>
+          <p-calendar
+            [required]="true"
+            dateFormat="dd / mm / yy"
+            class="p-input-shadow"
+            [name]="'eventStart'"
+            [(ngModel)]="event.endDate"
+            [iconDisplay]="'input'"
+            [showIcon]="true"
+          ></p-calendar>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="form-group">
+          <label class="required">End Time</label>
+          <p-calendar
+            [required]="true"
+            [name]="'eventStart'"
+            class="p-input-shadow"
+            [(ngModel)]="event.endTime"
+            hourFormat="12"
+            [timeOnly]="true"
+            [stepMinute]="10"
+            [iconDisplay]="'input'"
+            [showIcon]="false"
+          ></p-calendar>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row mt-24px">
+      <div class="col-md-12 mt-32px">
+        <div class="flex flex-wrap gap-5">
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="single"
+              [value]="false"
+              [(ngModel)]="event.isMultiple"
+              id="single"
+              (onClick)="onDateChange()"
+            ></p-radioButton>
+            <label for="single" class="ml-8px mb-0 fs-16">One Day Event</label>
+          </div>
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="isMultiple"
+              [value]="true"
+              [(ngModel)]="event.isMultiple"
+              id="isMultiple"
+              (onClick)="onDateChange()"
+            ></p-radioButton>
+            <label for="isMultiple" class="ml-8px mb-0 fs-16"
+              >Multiple Day Event</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 mt-32px">
+        @for (date of event.dates; track index; let index = $index) {
+        <div class="flex">
+          <div class="form-group">
+            <p-calendar
+              [placeholder]="'Event Date ' + (index + 1)"
+              [required]="true"
+              [name]="'date' + index"
+              [(ngModel)]="date.date"
+              [iconDisplay]="'input'"
+              [showIcon]="true"
+            ></p-calendar>
+          </div>
+          <div class="pointer">
+            <span (click)="removeLocation(index)">
+              <i class="pi pi-trash"></i><span class="fs-14">Remove</span></span
+            >
+          </div>
+        </div>
+
+        } @if (event.isMultiple) {
+        <div>
+          <span class="eve-clickable text-underline" (click)="addDates()">
+            <i class="pi pi-plus"></i>Add Dates</span
+          >
+        </div>
+        }
+      </div>
+    </div> -->
+  </form>
+  <div class="text-center">
+    <button
+      class="eve-btn eve-btn-primary-outline mt-32px mr-16px"
+      (click)="back()"
+    >
+      Back
+    </button>
+    <button class="eve-btn eve-btn-primary mt-32px" (click)="next()">
+      Next
+    </button>
+  </div>
+</div>

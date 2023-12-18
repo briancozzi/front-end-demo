@@ -11,20 +11,20 @@ import {
 import { BsModalService, BsModalRef, ModalOptions } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-basic-modal',
-  templateUrl: './basic-modal.component.html',
-  styleUrls: ['./basic-modal.component.scss'],
+  selector: 'app-base-modal',
+  templateUrl: './base-modal.component.html',
+  styleUrls: ['./base-modal.component.scss'],
   providers: [BsModalService],
-  standalone: true,
   imports: [CommonModule],
+  standalone: true,
 })
-export class BasicModalComponent implements OnInit {
+export class BaseModalComponent implements OnInit {
   @Input() ignoreBackdropClick: boolean = true;
-  @Input() heading: string = 'Modal open';
   @Output() hidden: EventEmitter<any> = new EventEmitter<any>();
   @Output() OnBackdrop: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild('modalTemplate', { static: false }) template: any;
 
+  modalRefs: BsModalRef[] = [];
   templateRef!: TemplateRef<any>;
   modalRef!: BsModalRef;
   config: ModalOptions = {
@@ -40,16 +40,13 @@ export class BasicModalComponent implements OnInit {
     this.modalService.onHidden.subscribe((reason: string) => {
       if (reason === 'backdrop-click') {
         this.OnBackdrop.emit();
-      }
-      if (reason === 'esc') {
-        this.hidden.emit();
+      } else {
       }
     });
   }
 
   show() {
     this.modalRef = this.modalService.show(this.template, this.config);
-    // this.modalRefs.push(this.modalRef);
   }
 
   hide(event?: any) {
@@ -57,6 +54,6 @@ export class BasicModalComponent implements OnInit {
   }
 
   closeAllModals() {
-    // this.modalRefs.forEach((modal) => modal.hide());
+    this.modalRefs.forEach((modal) => modal.hide());
   }
 }

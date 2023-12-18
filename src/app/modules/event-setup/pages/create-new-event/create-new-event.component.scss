@@ -1,21 +1,38 @@
 .create-new-event {
-  width: 800px;
-  .event-steppers {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    height: 100px;
-    .event-stepper {
-      height: 4px;
-      background-color: rgb(236, 236, 236);
-      width: 200px;
-      border-radius: 25px;
-      &.is-stepper-completed {
-        background-color: var(--eve-green-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .create-new-event-header {
+    padding: 18px;
+    background-color: #141414;
+    width: 100vw;
+    position: fixed;
+    z-index: 9;
+    img {
+      width: 140px;
+    }
+  }
+  .create-new-event-content {
+    // margin-top: 70px;
+    flex: 1;
+
+    .eve-get-started {
+      .img-wrapper {
+        padding: 1px;
+        border-radius: 50%;
+        margin: auto;
+        width: max-content;
+        margin-bottom: 32px;
+        img {
+          width: 70px;
+        }
       }
     }
   }
-  form {
-    margin-top: 48px;
+  .mt-72px {
+    margin-top: 72px;
+  }
+  .mt-120px {
+    margin-top: 120px;
   }
 }

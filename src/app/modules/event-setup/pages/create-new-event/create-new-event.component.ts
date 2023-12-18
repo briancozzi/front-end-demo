@@ -6,15 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-new-event.component.scss'],
 })
 export class CreateNewEventComponent implements OnInit {
-  completedSteps: number = 1;
-  event: any = {};
+  isGetStarted: boolean = false;
   constructor() {}
 
   ngOnInit() {}
 
-  getSteppers() {
-    return Array(4)
-      .fill(4, 1)
-      .map((x, i) => i);
+  onGetStarted() {
+    this.isGetStarted = false;
   }
 }

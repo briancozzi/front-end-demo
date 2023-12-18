@@ -1,9 +1,9 @@
 @mixin eventlify-base {
   font-size: 16px !important;
   color: var(--eve-base-color);
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f7fa !important ;
   -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", sans-serif !important;
   ::-webkit-scrollbar {
     width: 3px !important;
     height: 8px;
@@ -28,6 +28,9 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  @media only screen and (max-width: 1024px) {
+    font-size: 13px !important;
+  }
 }
 
 @mixin label {
@@ -36,6 +39,7 @@
   font-size: 14px;
   line-height: 20px;
   color: #4d4d4d;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 

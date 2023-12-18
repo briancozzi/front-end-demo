@@ -1,0 +1,27 @@
+<ng-template #modalTemplate>
+  <div class="modal-header b-b-0">
+    <div class="model-close-btn" (click)="hidden.emit()">
+      <img src="assets/svg/close.svg" alt="" />
+    </div>
+    <div class="heading">{{ heading }}</div>
+  </div>
+  <div class="modal-body w-5">
+    <div class="content">{{ content }}</div>
+  </div>
+  <div class="modal-footer new-modal-footer">
+    <button
+      class="tee-btn tee-btn-secondary"
+      [disabled]="isDeclining"
+      (click)="decline.emit()"
+    >
+      {{ declineBtnText }}
+    </button>
+    <button
+      class="tee-btn tee-btn-primary"
+      [disabled]="isConfirming"
+      (click)="confirm.emit()"
+    >
+      {{ confirmBtnText }}
+    </button>
+  </div>
+</ng-template>

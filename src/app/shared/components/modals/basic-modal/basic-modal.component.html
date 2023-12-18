@@ -1,3 +1,9 @@
-<p>
-  basic-modal works!
-</p>
+<ng-template #modalTemplate>
+  <div class="modal-header b-b-0">
+    <div class="model-close-btn" (click)="hidden.emit()">
+      <img src="assets/svg/close.svg" alt="" />
+    </div>
+    <div class="heading">{{ heading }}</div>
+  </div>
+  <ng-container *ngTemplateOutlet="templateRef"></ng-container>
+</ng-template>

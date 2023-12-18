@@ -1,0 +1,140 @@
+<div class="create-event-step-two">
+  <h1 class="fs-3 fw-600 text-center">Where will your event take place?</h1>
+  <p class="text-center">
+    Indicate whether your event is
+    <span class="text-primary fw-500">centralized at a single location</span> or
+    <span class="text-primary fw-500">dispersed accross multiple venues</span>.
+    If it is a
+    <span class="text-primary fw-500">virtual event with no venue</span>, Select
+    <span class="fw-600">'No Location'</span>.
+  </p>
+  <hr class="mt-32px mb-32px" />
+  <form #eventStepTwoForm="ngForm" class="mb-24px">
+    <div class="row mt-24px">
+      <div class="col-md-12 mt-32px center">
+        <div class="flex flex-wrap gap-4 center">
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="single"
+              [value]="false"
+              [(ngModel)]="event.isMultiple"
+              id="single"
+              (onClick)="onLocationChange()"
+            ></p-radioButton>
+            <label for="single" class="ml-8px mb-0 fs-16"
+              >Single Location</label
+            >
+          </div>
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="isMultiple"
+              [value]="true"
+              [(ngModel)]="event.isMultiple"
+              id="isMultiple"
+              (onClick)="onLocationChange()"
+            ></p-radioButton>
+            <label for="isMultiple" class="ml-8px mb-0 fs-16"
+              >Multiple Locations</label
+            >
+          </div>
+          <div class="flex align-items-center">
+            <p-radioButton
+              name="noLocation"
+              [value]="true"
+              [(ngModel)]="event.isLocation"
+              id="noLocation"
+              (onClick)="onNoLocation()"
+            ></p-radioButton>
+            <label for="noLocation" class="ml-8px mb-0 fs-16"
+              >No Location</label
+            >
+          </div>
+        </div>
+      </div>
+      @if (true) {
+      <div class="col-sm-12 mt-32px">
+        @for (location of event.locations; track index; let index = $index) {
+        <div class="form-group mb-12px">
+          <div class="form-inline-wrapper form-shadow">
+            @if (event.locations.length > 1 && index > 0) {
+            <div class="form-inline-icon-wrapper right">
+              <div class="form-inline-icon text-danger pointer center">
+                <span (click)="removeLocation(index)" class="center">
+                  <i class="pi pi-times fs-20px mr-0 fw-bolder"></i
+                  ><span class="fs-14"></span
+                ></span>
+              </div>
+            </div>
+            }
+            <div class="input-wrapper">
+              <input
+                type="text"
+                [name]="'location' + index"
+                [disabled]="event.isLocation"
+                class="form-control"
+                required
+                [(ngModel)]="location.name"
+                [placeholder]="'Enter venue name or address'"
+              />
+            </div>
+          </div>
+        </div>
+        } @if (event.isMultiple) {
+        <button
+          class="eve-btn eve-btn-primary-outline eve-btn-sm mt-32px mr-16px w-100 center"
+          (click)="addLocation()"
+          [disabled]="event.isLocation"
+        >
+          <i class="pi pi-plus"></i>Add location
+        </button>
+        }
+      </div>
+      }
+    </div>
+  </form>
+  <div class="center">
+    <div>
+      <button
+        class="eve-btn eve-btn-primary-outline mt-32px mr-16px"
+        (click)="back()"
+      >
+        Back
+      </button>
+      <button
+        class="eve-btn eve-btn-primary mt-32px"
+        (click)="next()"
+        [disabled]="!eventStepTwoForm.valid"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+
+<p-confirmDialog #cd>
+  <ng-template pTemplate="headless" let-message>
+    <div
+      class="flex flex-column align-items-center surface-overlay border-round p-24px"
+    >
+      <span class="fs-16 fw-500"
+        >Are you sure you want to delete this location?</span
+      >
+      <div class="flex align-items-center gap-2 mt-4">
+        <button
+          label="Save"
+          (click)="cd.accept()"
+          class="eve-btn eve-btn-primary mr-16px"
+        >
+          Confirm
+        </button>
+        <button
+          label="Cancel"
+          (click)="cd.reject()"
+          class="eve-btn eve-btn-outline-light"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </ng-template>
+</p-confirmDialog>

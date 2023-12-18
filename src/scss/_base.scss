@@ -1,15 +1,6 @@
 @import "./mixins";
-
 body {
   height: 100vh;
-  // font-size: var(--eve-font-size);
-  // ::-webkit-scrollbar {
-  //     display: none;
-  // }
-  font-family: var(--eve-font-family) !important;
-  font-weight: 500 !important;
-  // background-color: #f8f8f8 !important;
-  background-color: #fdfcff !important;
   ::-webkit-scrollbar {
     width: 3px !important;
     height: 8px;
@@ -21,16 +12,6 @@ h5 {
   font-weight: 500;
   margin-bottom: 20px;
 }
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   // text-align: center;
-// }
-// .row {
-// }
 
 .fs-24px {
   font-size: 24px !important;
@@ -321,64 +302,6 @@ ol li {
   font-size: 12px !important;
   color: #6c757d !important;
 }
-.booking-length-wrapper {
-  // margin-bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  width: max-content;
-  gap: 16px;
-  .date {
-    display: flex;
-    flex-direction: row;
-    label {
-      margin: 0;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    span {
-      font-weight: 600;
-      font-size: 12px;
-    }
-    .checkin-wrapper {
-      display: flex;
-      border-right: 1px solid #c9cdcf;
-      flex-direction: column;
-      padding-right: 12px;
-      .date-month {
-        font-size: 14px;
-        color: var(--eve-green-color);
-      }
-      .day {
-        font-size: 12px;
-      }
-    }
-    .checkout-wrapper {
-      display: flex;
-      flex-direction: column;
-      padding-left: 12px;
-      .date-month {
-        font-size: 14px;
-        color: var(--eve-green-color);
-      }
-      .day {
-        font-size: 12px;
-      }
-    }
-  }
-
-  .stay {
-    text-align: center;
-    .badge {
-      background-color: var(--eve-green-color);
-      padding: 4px 8px;
-      border-radius: 12px;
-    }
-  }
-}
-
-.mat-drawer-backdrop.mat-drawer-shown {
-  position: fixed !important;
-}
 
 .bg-green {
   background-color: var(--eve-green-color) !important;
@@ -390,43 +313,6 @@ ol li {
 
 .bg-green-100 {
   background-color: var(--bg-green-100);
-}
-
-.border-with-text {
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid var(--eve-green-color);
-  line-height: 0.1em;
-  margin: 48px 0 48px;
-  & > span {
-    background: #fff;
-    border: 1px solid var(--eve-green-color);
-    color: white;
-    padding: 4px 16px;
-    background-color: var(--eve-green-color);
-    font-size: 12px;
-    border-radius: 20px;
-    font-weight: 500;
-  }
-}
-
-.mat-tab-group {
-  height: 100%;
-}
-.mat-tab-body-wrapper {
-  flex-grow: 1;
-}
-
-.mat-tab-body {
-  display: flex !important;
-  flex-direction: column;
-}
-
-.mat-tab-body-content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  overflow-y: auto !important;
 }
 
 .eve-footer {
@@ -559,7 +445,7 @@ h4 {
 p {
   font-size: 14px;
   margin-bottom: 0;
-  color: #4d4d4d;
+  color: #4f4f4f;
   font-weight: 400;
 }
 
@@ -720,7 +606,7 @@ label {
 
 .text-secondary {
   font-size: 12px;
-  color: #6c757d !important;
+  color: 706e80 !important;
 }
 
 .border-radius-4px {
@@ -1221,4 +1107,12 @@ label {
   to {
     opacity: 0;
   }
+}
+
+.w-max-content {
+  width: max-content !important;
+}
+
+hr {
+  border: 1.5px solid rgb(107, 107, 107) !important;
 }

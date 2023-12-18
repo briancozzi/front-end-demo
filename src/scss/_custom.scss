@@ -1,12 +1,5 @@
 // Here you can add other styles
 body {
-  // font-family: Inter, "Source Sans Pro", Helvetica, Arial, sans-serif;
-  background: white !important;
-  // color: #183247;
-  color: #333333;
-  @media only screen and (max-width: 1024px) {
-    font-size: 13px !important;
-  }
 }
 .app,
 app-login,
@@ -86,10 +79,6 @@ a {
   font-size: 12px !important;
 }
 
-// .form-control[readonly] {
-//   background-color: white;
-// }
-
 .hint {
   font-size: 14px;
   line-height: 20px;
@@ -103,10 +92,6 @@ a {
 .-m-10 {
   margin: -10px;
 }
-
-// .form-control:focus {
-//   box-shadow: none !important;
-// }
 
 .hrefLink:hover {
   text-decoration: underline !important;
@@ -261,8 +246,8 @@ a {
 
 .flex {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 1.5rem;
+  margin-bottom: 0px !important;
 }
 .create {
   font-size: 12px;
@@ -409,10 +394,6 @@ button[disabled] {
   border-radius: 50% !important;
 }
 
-.flex {
-  margin-bottom: 0px !important;
-}
-
 .fs-10 {
   font-size: 10px;
 }
@@ -453,7 +434,7 @@ p {
 h1 {
   font-size: 24px;
   margin-bottom: 16px;
-  text-align: center;
+  // text-align: center;
 }
 
 ::-webkit-input-placeholder {
@@ -785,4 +766,11 @@ input {
   .p-tabview-panels {
     padding: 0 !important;
   }
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 600;
 }
