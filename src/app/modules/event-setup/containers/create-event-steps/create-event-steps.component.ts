@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-event-steps.component.scss'],
 })
 export class CreateEventStepsComponent implements OnInit {
-  completedSteps: number = 3;
+  completedSteps: number = 1;
   event: any = {};
   constructor() {}
 

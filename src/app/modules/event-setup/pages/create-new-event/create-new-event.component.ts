@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-new-event.component.scss'],
 })
 export class CreateNewEventComponent implements OnInit {
-  isGetStarted: boolean = false;
+  isGetStarted: boolean = true;
   constructor() {}
 
   ngOnInit() {}
