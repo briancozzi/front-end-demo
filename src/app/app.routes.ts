@@ -14,8 +14,8 @@ export const routes: Routes = [
   {
     path: 'event-setup',
     loadChildren: () =>
-      import('./modules/event-setup/event-setup.module').then(
-        (m) => m.EventSetupModule
+      import('./modules/event-wizard-setup/event-wizard-setup.module').then(
+        (m) => m.EventWizardSetupModule
       ),
   },
 ];

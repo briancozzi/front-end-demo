@@ -76,6 +76,10 @@ export class CreateEventStepFourComponent implements OnInit {
       //   });
     } else {
       this.event.tickets.length = 1;
+      this.event.tickets[0] = {
+        name: '',
+        price: '',
+      };
     }
   }
 

@@ -8,4 +8,4 @@ const routes: Routes = [
   },
 ];
 
-export const EventSetupRoutes = RouterModule.forChild(routes);
+export const EventWizardSetupRoutes = RouterModule.forChild(routes);
