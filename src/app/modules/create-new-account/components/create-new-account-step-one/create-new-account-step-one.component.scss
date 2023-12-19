@@ -1,6 +1,5 @@
-.app-login {
+.create-new-account-step-one {
   overflow: hidden;
-  height: 100vh;
   .login-form-wrapper {
     flex-basis: 50%;
     flex-grow: 1;
@@ -15,6 +14,7 @@
     .login-form {
       padding: 40px 0;
       width: 450px;
+      height: 100%;
     }
   }
   .login-image-wrapper {

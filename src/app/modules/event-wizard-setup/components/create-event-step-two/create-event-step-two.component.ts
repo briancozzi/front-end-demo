@@ -59,8 +59,8 @@ export class CreateEventStepTwoComponent implements OnInit {
 
   removeLocation(index: number) {
     this.confirmationService.confirm({
-      header: 'Are you sure?',
-      message: 'Please confirm to proceed.',
+      // header: 'Are you sure?',
+      // message: 'Please confirm to proceed.',
       accept: () => {
         this.event.locations.splice(index, 1);
       },

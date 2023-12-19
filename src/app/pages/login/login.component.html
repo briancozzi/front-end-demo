@@ -1,1 +1,79 @@
-<p>login works!</p>
+<div class="app-login">
+  <div class="flex">
+    <div class="h-100 login-form-wrapper border-right-green">
+      <div class="login-form center container h-100">
+        <div class="">
+          <div class="">
+            <img src="assets/images/svgs/eve-full-logo-dark.svg" />
+          </div>
+          <div class="login-h1">Login</div>
+
+          <div class="row h-100">
+            <div class="col-md-12">
+              <div class="form-group eve-input-box">
+                <label for="name">Email Address</label>
+                <input type="text" name="name" class="form-control" required />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group eve-input-box">
+                <label for="name">Password</label>
+                <input
+                  [type]="isPassword ? 'password' : 'text'"
+                  name="name"
+                  class="form-control"
+                  required
+                />
+                <!-- <div class="eve-input-box-icon">
+                <i
+                  (click)="isPassword = !isPassword"
+                  class="pi"
+                  [ngClass]="{
+                    'pi-eye': isPassword,
+                    'pi-eye-slash': !isPassword
+                  }"
+                ></i>
+              </div> -->
+              </div>
+            </div>
+            <div class="col-md-12">
+              <button class="eve-btn eve-btn-login w-100">Login</button>
+            </div>
+            <div class="col-md-12">
+              <div class="text-with-line"><span>OR</span></div>
+            </div>
+            <div class="col-md-12">
+              <button class="eve-btn even-btn-login-outline w-100 fs-16">
+                <span class="mr-8px">
+                  <img src="assets/images/svgs/google.svg" /></span
+                ><span class="fw-400">Login with</span> Google
+              </button>
+            </div>
+            <div class="col-md-12 mt-16px">
+              <button class="eve-btn even-btn-login-outline w-100 fs-16">
+                <span class="mr-8px">
+                  <img src="assets/images/svgs/facebook.svg" /></span
+                ><span class="fw-400">Login with</span> Facebook
+              </button>
+            </div>
+
+            <div class="col-md-12 mt-40px">
+              <div class="d-flex">
+                <div>
+                  <strong (click)="createAccount()" class="pointer"
+                    >Create Account</strong
+                  >
+                </div>
+                <div class="mr-16px ml-16px"><strong>|</strong></div>
+                <div><strong class="pointer">Forgot Password</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="login-image-wrapper">
+      <img src="assets/images/svgs/login-img.png" />
+    </div>
+  </div>
+</div>

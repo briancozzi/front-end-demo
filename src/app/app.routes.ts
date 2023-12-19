@@ -1,15 +1,22 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './pages';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'event-setup',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'create-new-account',
+    loadChildren: () =>
+      import('./modules/create-new-account/create-new-account.module').then(
+        (m) => m.CreateNewAccountModule
+      ),
   },
   {
     path: 'event-setup',

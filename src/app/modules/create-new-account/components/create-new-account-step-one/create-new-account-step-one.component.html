@@ -1,0 +1,43 @@
+<div class="create-new-account-step-one">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group eve-input-box">
+        <label for="name">Email Address</label>
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          [(ngModel)]="_account.email"
+          required
+        />
+      </div>
+    </div>
+    <div class="col-md-12">
+      <button class="eve-btn eve-btn-login w-100" (click)="continue()">
+        Continue
+      </button>
+    </div>
+    <div class="col-md-12">
+      <div class="text-with-line"><span>OR</span></div>
+    </div>
+    <div class="col-md-12">
+      <button class="eve-btn w-100 fs-16 even-btn-login-outline">
+        <span class="mr-8px"> <img src="assets/images/svgs/google.svg" /></span
+        ><span class="fw-400">Login with</span> Google
+      </button>
+    </div>
+    <div class="col-md-12 mt-16px">
+      <button class="eve-btn w-100 fs-16 even-btn-login-outline">
+        <span class="mr-8px">
+          <img src="assets/images/svgs/facebook.svg" /></span
+        ><span class="fw-400">Login with</span> Facebook
+      </button>
+    </div>
+    <div class="col-md-12 mt-40px">
+      <span class="pointer" (click)="login()"
+        >Already have an account?
+        <span class="text-underline-hover fw-600">Click here</span>
+      </span>
+    </div>
+  </div>
+</div>

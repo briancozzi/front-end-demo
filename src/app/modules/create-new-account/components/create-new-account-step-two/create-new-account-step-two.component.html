@@ -1,0 +1,141 @@
+<div class="create-new-account-step-two">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group eve-input-box">
+        <label for="name">Email Address </label>
+        <input
+          type="text"
+          name="email"
+          class="form-control"
+          [(ngModel)]="account.email"
+          required
+        />
+        <div class="eve-input-box-icon">
+          <img src="assets/images/svgs/pencil.svg" class="pointer" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group eve-input-box">
+        <label for="name">Confirm Email </label>
+        <input type="text" name="confirmEmail" class="form-control" required />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group eve-input-box">
+        <!-- <label for="name">First Name</label> -->
+        <input
+          type="text"
+          name="firstName"
+          class="form-control pt-0"
+          placeholder="First Name"
+          required
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group eve-input-box">
+        <!-- <label for="name">Last Name</label> -->
+        <input
+          type="text"
+          name="lastName"
+          class="form-control pt-0"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group eve-input-box">
+        <!-- <label for="name">Password</label> -->
+        <input
+          [type]="!isPassword ? 'password' : 'text'"
+          name="password"
+          class="form-control pt-0"
+          placeholder="Password"
+          required
+        />
+        <div class="eve-input-box-icon">
+          <img
+            (click)="isPassword = !isPassword"
+            [src]="
+              'assets/images/svgs/' + (isPassword ? 'eye-slash.svg' : 'eye.svg')
+            "
+            class="pointer"
+          />
+          <!-- <i
+            (click)="isPassword = !isPassword"
+            class="pi"
+            [ngClass]="{
+              'pi-eye': isPassword,
+              'pi-eye-slash': !isPassword
+            }"
+          ></i> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="fs-12 fw-600">Your password must be at least 8 characters</div>
+  <div class="row">
+    <div class="col-md-12">
+      <button
+        class="eve-btn eve-btn-login w-100 mt-16px fw-bolder"
+        (click)="policyConfirmation()"
+      >
+        Create Account
+      </button>
+    </div>
+  </div>
+  <div class="col-md-12 mt-40px">
+    <span class="pointer" (click)="login()"
+      >Already have an account?
+      <span class="text-underline-hover fw-600">Click here</span>
+    </span>
+  </div>
+  <p-confirmDialog #cd>
+    <ng-template pTemplate="headless" let-message>
+      <div
+        class="flex flex-column align-items-center surface-overlay border-round p-32px"
+      >
+        <div class="mt-24px mb-24px">
+          <span class="exclamation-wrapper">
+            <img src="assets/images/svgs/exclamation.svg"
+          /></span>
+        </div>
+        <h1 class="fw-bold mt-32px">Terms & Conditions</h1>
+        <span class="fs-16 fw-500 mt-16px mb-24px"
+          >I accept the
+          <span class="text-success text-underline"
+            >Eventlify Terms of Use</span
+          >
+          and have read the
+          <span class="text-success text-underline">Privacy Policy</span>.</span
+        >
+        <div class="flex align-items-center gap-2 mt-16px">
+          <button
+            label="Save"
+            (click)="cd.reject()"
+            class="eve-btn eve-btn-login-danger-outline dialog-btn mr-16px fw-bold"
+          >
+            Cancel
+          </button>
+          <button
+            label="Cancel"
+            (click)="cd.accept()"
+            class="eve-btn eve-btn-login dialog-btn fw-bold"
+          >
+            Agree
+          </button>
+        </div>
+        <div class="mt-48px">
+          <img src="assets/images/svgs/eve-faded-logo.svg" class="w-100px" />
+        </div>
+      </div>
+    </ng-template>
+  </p-confirmDialog>
+</div>

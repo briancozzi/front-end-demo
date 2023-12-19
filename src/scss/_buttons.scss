@@ -77,6 +77,18 @@
     }
   }
 
+  &.eve-btn-login {
+    background-color: var(--eve-green-color) !important;
+    border-radius: 8px;
+    font-size: 16px;
+    height: 52px;
+    font-weight: 600;
+    color: white;
+    &:hover {
+      filter: brightness(95%) !important;
+    }
+  }
+
   // Success
   &.eve-btn-success {
     background-color: var(--eve-green-color);
@@ -108,6 +120,42 @@
     &:hover {
       background-color: var(--eve-red-color);
       color: white;
+    }
+  }
+
+  &.eve-btn-login-danger-outline {
+    border-radius: 8px;
+    height: 52px;
+    font-weight: 600;
+    background-color: white;
+    border: 1px solid var(--eve-red-color) !important;
+    color: var(--eve-red-color);
+    &:hover {
+      background-color: var(--eve-red-color);
+      color: white;
+    }
+  }
+
+  &.eve-btn-outline {
+    background-color: white;
+    border: 1px solid #1c1c1c !important;
+    color: #1c1c1c;
+    &:hover {
+      background-color: #dbdbdb;
+      // color: white;
+    }
+  }
+
+  &.even-btn-login-outline {
+    border-radius: 8px;
+    height: 52px;
+    font-weight: 600;
+    background-color: white;
+    border: 1px solid #1c1c1c !important;
+    color: #1c1c1c;
+    &:hover {
+      background-color: #dbdbdb;
+      // color: white;
     }
   }
 
