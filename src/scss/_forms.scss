@@ -55,6 +55,7 @@
 
   .form-control {
     width: -webkit-fill-available;
+    font-family: var(--eve-font-family);
     font-weight: 500;
     &.form-shadow {
       border-radius: 2px !important;
