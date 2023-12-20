@@ -1,0 +1,24 @@
+.dialog-box {
+  padding: 24px;
+  .dialog-box-header-wrapper {
+    .dialog-box-close {
+      // position: absolute;
+      right: 12px;
+      display: flex;
+      justify-content: right;
+      .pi {
+        font-size: 16px;
+        color: #c0c0c0;
+        margin-right: 0;
+        &:hover {
+          color: #000;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .dialog-box-content {
+    max-height: calc(181vh - 624px);
+    overflow: auto;
+  }
+}

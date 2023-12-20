@@ -65,7 +65,11 @@
                   >
                 </div>
                 <div class="mr-16px ml-16px"><strong>|</strong></div>
-                <div><strong class="pointer">Forgot Password</strong></div>
+                <div>
+                  <strong class="pointer" (click)="forgotPassword()"
+                    >Forgot Password</strong
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -77,3 +81,13 @@
     </div>
   </div>
 </div>
+<ng-template #forgotPasswordTemplate>
+  <app-forgot-password
+    (backToLogin)="forgotPasswordDialogBox.hide()"
+    (createAccount)="createAccount()"
+  ></app-forgot-password>
+</ng-template>
+<app-basic-dialog-box
+  #forgotPasswordDialogBox
+  (onClose)="forgotPasswordDialogBox.hide()"
+></app-basic-dialog-box>

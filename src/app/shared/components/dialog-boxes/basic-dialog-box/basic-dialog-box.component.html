@@ -1,0 +1,31 @@
+<p-confirmDialog
+  #dialogBox
+  [closable]="false"
+  [acceptVisible]="false"
+  [rejectVisible]="false"
+>
+  <ng-template pTemplate="headless" let-message>
+    <div class="dialog-box">
+      <div class="dialog-box-header-wrapper">
+        <div class="dialog-box-close">
+          <i class="pi pi-times" (click)="close()"></i>
+        </div>
+        <div></div>
+      </div>
+      <div class="dialog-box-content">
+        <ng-container *ngTemplateOutlet="templateRef"></ng-container>
+      </div>
+    </div>
+  </ng-template>
+</p-confirmDialog>
+
+<!-- <p-dialog
+  [header]="header"
+  [(visible)]="visible"
+  [modal]="true"
+  [style]="{ width: '' }"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <ng-container *ngTemplateOutlet="templateRef"></ng-container>
+</p-dialog> -->

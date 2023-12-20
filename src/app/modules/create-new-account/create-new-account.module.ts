@@ -13,7 +13,6 @@ const COMPONENTS = [
   CreateNewAccountStepOneComponent,
   CreateNewAccountStepTwoComponent,
 ];
-
 const LIB_MODULES = [ConfirmPopupModule, ConfirmDialogModule];
 
 @NgModule({
