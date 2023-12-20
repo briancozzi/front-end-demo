@@ -91,7 +91,7 @@
       </button>
     </div>
   </div>
-  <div class="col-md-12 mt-40px">
+  <div class="col-md-12 mt-40px mb-24px">
     <span class="pointer" (click)="login()"
       >Already have an account?
       <span class="text-underline-hover fw-600">Click here</span>
@@ -100,15 +100,15 @@
   <p-confirmDialog #cd>
     <ng-template pTemplate="headless" let-message>
       <div
-        class="flex flex-column align-items-center surface-overlay border-round p-32px"
+        class="flex flex-column align-items-center surface-overlay border-round p-32px terms-and-conditions-popover"
       >
         <div class="mt-24px mb-24px">
           <span class="exclamation-wrapper">
             <img src="assets/images/svgs/exclamation.svg"
           /></span>
         </div>
-        <h1 class="fw-bold mt-32px">Terms & Conditions</h1>
-        <span class="fs-16 fw-500 mt-16px mb-24px"
+        <h1 class="fw-bold mt-32px text-center">Terms & Conditions</h1>
+        <span class="fs-16 fw-500 mt-16px mb-24px conditions text-center"
           >I accept the
           <span class="text-success text-underline"
             >Eventlify Terms of Use</span
@@ -116,7 +116,7 @@
           and have read the
           <span class="text-success text-underline">Privacy Policy</span>.</span
         >
-        <div class="flex align-items-center gap-2 mt-16px">
+        <div class="flex align-items-center gap-2">
           <button
             label="Save"
             (click)="cd.reject()"

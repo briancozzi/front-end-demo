@@ -6,6 +6,7 @@
     flex-grow: 1;
     height: calc(100vh) !important;
     overflow: scroll;
+    border-right: 2px solid var(--eve-green-color);
     .login-h1 {
       font-size: 36px;
       color: #1e0a3b;
@@ -30,5 +31,26 @@
 
   .mt-40px {
     margin-top: 40px;
+  }
+  .main-row {
+    height: min-content !important;
+    padding-bottom: 40px;
+  }
+  @media screen and (max-width: 1054px) {
+    .login-form-wrapper {
+      border-right: none !important;
+    }
+    .login-image-wrapper {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 470px) {
+    .login-form-wrapper {
+      margin-left: 12px;
+      border-right: none !important;
+      .login-form {
+        width: 100%;
+      }
+    }
   }
 }

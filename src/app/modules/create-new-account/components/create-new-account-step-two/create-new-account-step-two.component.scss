@@ -51,4 +51,14 @@
     padding: 24px 28px;
     border-radius: 50%;
   }
+
+  .terms-and-conditions-popover {
+    @media screen and (max-width: 632px) {
+      width: calc(100vw - 26px);
+      .conditions {
+        font-size: 13px !important;
+        margin-top: 0px !important;
+      }
+    }
+  }
 }

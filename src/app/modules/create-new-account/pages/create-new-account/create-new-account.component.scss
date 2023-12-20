@@ -4,6 +4,7 @@
   .login-form-wrapper {
     flex-basis: 50%;
     flex-grow: 1;
+    border-right: 2px solid var(--eve-green-color);
     height: calc(100vh) !important;
     overflow: scroll;
     .login-h1 {
@@ -31,5 +32,23 @@
 
   .mt-40px {
     margin-top: 40px;
+  }
+
+  @media screen and (max-width: 1054px) {
+    .login-form-wrapper {
+      border-right: none !important;
+    }
+    .login-image-wrapper {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 470px) {
+    .login-form-wrapper {
+      margin-left: 12px;
+      border-right: none !important;
+      .login-form {
+        width: 100%;
+      }
+    }
   }
 }
