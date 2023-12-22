@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('forgotPasswordDialogBox', { static: false })
   forgotPasswordDialogBox!: BasicDialogBoxComponent;
   constructor(private router: Router) {}
+
   ngOnInit() {
     setTimeout(() => {
       this.isLoading = true;

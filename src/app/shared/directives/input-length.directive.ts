@@ -3,6 +3,7 @@ import { NgModel } from '@angular/forms';
 
 @Directive({
   selector: '[InputLengthDirective]',
+  standalone: true,
 })
 export class InputLengthDirective {
   constructor(

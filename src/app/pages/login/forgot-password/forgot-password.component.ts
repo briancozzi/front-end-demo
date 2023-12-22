@@ -2,13 +2,20 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ForgotPasswordPhoneVerificationComponent } from './forgot-password-phone-verification/forgot-password-phone-verification.component';
+import { ForgotPasswordEmailVerificationComponent } from './forgot-password-email-verification/forgot-password-email-verification.component';
 
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',
   styleUrls: ['./forgot-password.component.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ForgotPasswordPhoneVerificationComponent,
+    ForgotPasswordEmailVerificationComponent,
+  ],
 })
 export class ForgotPasswordComponent implements OnInit {
   @Output() backToLogin = new EventEmitter();
