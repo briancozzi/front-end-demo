@@ -67,14 +67,6 @@
             "
             class="pointer"
           />
-          <!-- <i
-            (click)="isPassword = !isPassword"
-            class="pi"
-            [ngClass]="{
-              'pi-eye': isPassword,
-              'pi-eye-slash': !isPassword
-            }"
-          ></i> -->
         </div>
       </div>
     </div>
@@ -100,7 +92,7 @@
   <p-confirmDialog #cd>
     <ng-template pTemplate="headless" let-message>
       <div
-        class="flex flex-column align-items-center surface-overlay border-round p-32px terms-and-conditions-popover"
+        class="flex flex-column align-items-center surface-overlay border-round p-24px terms-and-conditions-popover"
       >
         <div class="mt-24px mb-24px">
           <span class="exclamation-wrapper">
@@ -110,11 +102,12 @@
         <h1 class="fw-bold mt-32px text-center">Terms & Conditions</h1>
         <span class="fs-16 fw-500 mt-16px mb-24px conditions text-center"
           >I accept the
-          <span class="text-success text-underline"
+          <span class="text-success text-underline pointer"
             >Eventlify Terms of Use</span
           >
           and have read the
-          <span class="text-success text-underline">Privacy Policy</span>.</span
+          <span class="text-success text-underline pointer">Privacy Policy</span
+          >.</span
         >
         <div class="flex align-items-center gap-2">
           <button

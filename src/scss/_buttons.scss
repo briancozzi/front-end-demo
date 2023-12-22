@@ -55,16 +55,6 @@
     border-radius: 40px;
   }
 
-  // Disable button
-  &:disabled {
-    opacity: 0.6;
-    box-shadow: none !important;
-    background-color: #d7d7d7 !important;
-    &:hover {
-      filter: none;
-    }
-  }
-
   /** Button classes */
   // Flat button
 
@@ -73,7 +63,7 @@
     box-shadow: none;
     border: 1px solid var(--secondary-text-color);
     &:hover {
-      filter: brightness(95%) !important;
+      filter: brightness(90%) !important;
     }
   }
 
@@ -180,6 +170,16 @@
   //   font-weight: 500;
   //   color: #fff;
   // }
+  // Disable button
+  &:disabled {
+    border: 2px solid #cbcbcb !important;
+    background-color: #cbcbcb !important;
+    color: white;
+    opacity: 1;
+    &:hover {
+      filter: none;
+    }
+  }
 }
 
 .eve-btn-outline-light {
@@ -224,5 +224,25 @@
   &:hover {
     // opacity: 0.8;
     background-color: #f7f7f7;
+  }
+}
+
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #cbcbcb;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

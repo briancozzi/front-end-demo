@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './pages';
+import { LoginComponent, LoginWelcomeBackComponent } from './pages';
 
 export const routes: Routes = [
   {
@@ -10,6 +10,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'set-password',
+    component: LoginWelcomeBackComponent,
   },
   {
     path: 'create-new-account',

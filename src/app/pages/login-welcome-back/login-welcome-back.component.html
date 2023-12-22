@@ -1,0 +1,93 @@
+<div class="login-welcome-back">
+  <div class="flex">
+    <div class="h-100 login-form-wrapper border-right-green">
+      <div class="login-form center container h-100">
+        <div class="h-100">
+          <div class="">
+            <img src="assets/images/svgs/eve-full-logo-dark.svg" />
+          </div>
+          <div class="login-h1">Welcome Back!</div>
+          <span class="fw-500 mt-16px mb-24px conditions text-center"
+            >You can set a password or login without one.</span
+          >
+          @if (isLinkExpired) {
+          <div class="error-box d-flex mb-24px mt-24px">
+            <div class="center mr-16px">
+              <img src="assets/images/svgs/link-expired.svg" />
+            </div>
+            <div>
+              <div>Your link is expired. Please request a new link.</div>
+              <div>
+                <span class="text-blue pointer" (click)="backToLogin()"
+                  >Go to Login</span
+                >
+              </div>
+            </div>
+          </div>
+          }
+          <div class="col-md-12 mt-24px">
+            <button
+              class="eve-btn eve-btn-login w-100"
+              (click)="isLinkExpired = true"
+            >
+              Continue Without a Password
+            </button>
+          </div>
+          <div class="col-md-12">
+            <div class="text-with-line"><span>OR</span></div>
+          </div>
+          <div class="main-row h-100">
+            @if(isSetPassword){
+            <div class="col-md-12">
+              <div class="form-group eve-input-box">
+                <!-- <label for="name">Password</label> -->
+                <input
+                  [type]="!isPassword ? 'password' : 'text'"
+                  name="password"
+                  class="form-control pt-0"
+                  placeholder="Password"
+                  required
+                />
+                <div class="eve-input-box-icon">
+                  <img
+                    (click)="isPassword = !isPassword"
+                    [src]="
+                      'assets/images/svgs/' +
+                      (isPassword ? 'eye-slash.svg' : 'eye.svg')
+                    "
+                    class="pointer"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12"><hr /></div>
+            <div class="fs-12 fw-600">
+              Your password must be at least 8 characters
+            </div>
+            <div class="col-md-12">
+              <button
+                class="eve-btn eve-btn-set-password-btn w-100 mt-16px fw-bolder"
+              >
+                Save Password
+              </button>
+            </div>
+            }@else {
+            <div class="col-md-12">
+              <button
+                class="eve-btn even-btn-login-outline fw-bold w-100"
+                (click)="isSetPassword = true"
+              >
+                Set a Password
+              </button>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="login-image-wrapper">
+      <img src="assets/images/svgs/login-img.png" />
+    </div>
+  </div>
+</div>

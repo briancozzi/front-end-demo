@@ -19,13 +19,17 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 })
 export class LoginComponent implements OnInit {
   isPassword: boolean = true;
-
+  isLoading: boolean = false;
   @ViewChild('forgotPasswordTemplate', { static: false })
   forgotPasswordTemplate!: TemplateRef<any>;
   @ViewChild('forgotPasswordDialogBox', { static: false })
   forgotPasswordDialogBox!: BasicDialogBoxComponent;
   constructor(private router: Router) {}
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      this.isLoading = true;
+    }, 2000);
+  }
 
   createAccount() {
     this.router.navigate(['/create-new-account']);

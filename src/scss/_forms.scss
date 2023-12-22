@@ -145,6 +145,16 @@
 }
 
 .form-group {
+  label {
+    transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  &:focus-within {
+    label {
+      font-weight: 600 !important;
+      color: #0075ff !important;
+    }
+    border-color: #0075ff !important;
+  }
   &.eve-input-box {
     position: relative;
     label {
@@ -163,14 +173,10 @@
       // font-size: 14px;
       padding: 20px 12px 0px 12px;
       background-color: #f2f2f2 !important;
-      border: 1px solid #f2f2f2;
+      border: 2px solid #f2f2f2;
       border-radius: 8px;
       &:focus {
-        // border: 1px solid #f2f2f2;
         border-color: #0075ff !important;
-        & ~ label {
-          color: #00f; // Change label color when input is focused
-        }
       }
     }
     .eve-input-box-icon {
