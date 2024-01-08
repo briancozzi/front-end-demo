@@ -7054,15 +7054,57 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   }
   .p-placeholder {
     font-size: 14px !important;
-    font-family: "Montserrat", sans-serif !important;
+    font-family: var(--eve-font-family) !important;
   }
   .p-icon-wrapper {
     color: var(--eve-primary-color);
     font-weight: 600;
   }
 }
+
+.p-dropdown-eve-input {
+  .p-dropdown {
+    height: 60px;
+    padding: 12px;
+    background-color: #f2f2f2 !important;
+    border: 2px solid #f2f2f2 !important;
+    border-radius: 8px !important;
+    font-family: var(--eve-font-family) !important;
+    &:focus {
+      border-color: #0075ff !important;
+    }
+    .p-dropdown-label {
+      display: flex !important;
+      justify-content: start !important;
+      align-items: center !important;
+      padding: 0 !important;
+      font-family: var(--eve-font-family) !important;
+      font-weight: 500;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+      font-size: 16px;
+      font-weight: 500;
+      &.p-highlight {
+        color: #0075ff !important;
+      }
+    }
+    &.p-inputwrapper-focus {
+      border-color: #0075ff !important;
+    }
+    .p-overlay {
+      width: min-content;
+    }
+    .p-dropdown-trigger {
+      width: 12px;
+    }
+  }
+  .p-placeholder {
+    font-size: 14px !important;
+    font-family: var(--eve-font-family) !important;
+  }
+}
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: var(--eve-font-family) !important;
 }
 
 .p-input-icon-left > i:first-of-type {
@@ -7099,3 +7141,40 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 //   border: none;
 //   padding-top: 0;
 // }
+
+.p-eve-accordion {
+  .p-accordion {
+    .p-accordion-tab {
+      margin-bottom: 12px;
+    }
+    .p-accordion-header {
+      .p-accordion-header-link {
+        padding: 14px 20px;
+        border: none !important;
+        background-color: #f2f2f2;
+        &:hover {
+          background-color: #f2f2f2 !important;
+        }
+      }
+      &:hover {
+        .p-accordion-header:not(.p-disabled).p-highlight:hover
+          .p-accordion-header-link {
+          background-color: #f2f2f2 !important;
+          border-radius: 8px !important;
+          border-bottom-right-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+      }
+    }
+    .p-accordion-content {
+      border: none !important;
+    }
+  }
+  .p-accordion
+    .p-accordion-header:not(.p-disabled).p-highlight
+    .p-accordion-header-link {
+    background-color: #f2f2f2 !important;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}

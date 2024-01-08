@@ -1,0 +1,296 @@
+<div class="registration-form-package-selection">
+  <div class="rfps-heading">
+    <div class="big-heading">Select</div>
+    <div class="small-heading">Package</div>
+  </div>
+  <div class="packages-content center">
+    <div class="packages-wrapper">
+      <div class="note">
+        <span class="text-danger">Note:</span> Select your desired packages from
+        the list below.
+      </div>
+      <div class="packages">
+        <div class="heading">GOLF GROUP PACKAGE(S)</div>
+        <div class="event-packages">
+          @for (item of eventPackages; track $index) {
+          <div class="position-relative">
+            <div
+              class="event-background"
+              [ngClass]="{
+                'is-selected': item.isSelected,
+                'is-sold-out': item.soldOut
+              }"
+            >
+              <div class="text-rotate center">Sold Out</div>
+            </div>
+            <div
+              class="event-package"
+              style="z-index: 999"
+              [ngClass]="{ 'sold-out': item.soldOut }"
+            >
+              <div class="details">
+                <div>
+                  <div class="name">{{ item.name }} <br />Sponsor</div>
+                  <div class="tickets">
+                    <img src="assets/images/svgs/ticket.svg" width="20px" />
+                    {{ item.numberOfTickets }} tickets in package
+                  </div>
+                </div>
+                <div class="price">
+                  {{ item.price | currency : "USD" : "symbol" : "1.0-0" }}
+                </div>
+              </div>
+
+              <div class="quantity">
+                <p-accordion class="w-full p-eve-accordion">
+                  <p-accordionTab [iconPos]="'end'">
+                    <ng-template pTemplate="header">
+                      <span class="flex align-items-center gap-2 w-full">
+                        <span class="font-semibold fs-16 text-dark"
+                          >Golf Details</span
+                        >
+                      </span>
+                    </ng-template>
+                    <div class="inclusions">
+                      <ul>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            12 tournament playing spots including tee gifts
+                            <span class="fw-600 text-dark">(4 groups)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            <span
+                              >First choice for celebrity golfers in your group </span
+                            ><span class="fw-600 text-dark"> (4 total)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            Green Fees, golf carts, breakfast, lunch, and on
+                            course activities
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>Group photo with celebrity</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </p-accordionTab>
+                  <p-accordionTab [iconPos]="'end'">
+                    <ng-template pTemplate="header">
+                      <span class="flex align-items-center gap-2 w-full">
+                        <span class="font-semibold fs-16 text-dark"
+                          >Sponsorship Inclusion</span
+                        >
+                      </span>
+                    </ng-template>
+                    <div class="inclusions">
+                      <ul>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            12 tournament playing spots including tee gifts
+                            <span class="fw-600 text-dark">(4 groups)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            <span
+                              >First choice for celebrity golfers in your group </span
+                            ><span class="fw-600 text-dark"> (4 total)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            Green Fees, golf carts, breakfast, lunch, and on
+                            course activities
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>Group photo with celebrity</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </p-accordionTab>
+                </p-accordion>
+                @if (!item.soldOut) {
+                <div class="select-qty">
+                  <div class="qty-control-wrapper">
+                    <div class="center qty-control">
+                      <i class="pi pi-minus mr-0"></i>
+                    </div>
+                    <div class="fw-600">12</div>
+                    <div class="center qty-control">
+                      <i class="pi pi-plus mr-0"></i>
+                    </div>
+                  </div>
+                </div>
+                }@else {
+                <button class="eve-btn eve-btn-danger">Add to Wait List</button
+                >}
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      <div class="packages">
+        <div class="heading">SPONSORSHIP PACKAGE(S)</div>
+        <div class="event-packages">
+          @for (item of sponsorshipPackages; track $index) {
+          <div class="position-relative">
+            <div
+              class="event-background"
+              [ngClass]="{
+                'is-selected': item.isSelected,
+                'is-sold-out': item.soldOut
+              }"
+            >
+              <div class="text-rotate center">Sold Out</div>
+            </div>
+            <div
+              class="event-package"
+              style="z-index: 999"
+              [ngClass]="{ 'sold-out': item.soldOut }"
+            >
+              <div class="details">
+                <div>
+                  <div class="name">{{ item.name }} <br />Sponsor</div>
+                  <div class="tickets">
+                    <img src="assets/images/svgs/ticket.svg" width="20px" />
+                    {{ item.numberOfTickets }} tickets in package
+                  </div>
+                </div>
+                <div class="price">
+                  {{ item.price | currency : "USD" : "symbol" : "1.0-0" }}
+                </div>
+              </div>
+              <!-- <div class="details">
+                <div class="name">{{ item.name }} <br />Sponsor</div>
+                <div class="tickets">
+                  <img src="assets/images/svgs/ticket.svg" width="20px" />
+                  {{ item.numberOfTickets }} tickets in package
+                </div>
+                <div class="price">
+                  {{ item.price | currency : "USD" : "symbol" : "1.0-0" }}
+                </div>
+              </div> -->
+
+              <div class="quantity">
+                <p-accordion class="w-full p-eve-accordion">
+                  <p-accordionTab [iconPos]="'end'">
+                    <ng-template pTemplate="header">
+                      <span class="flex align-items-center gap-2 w-full">
+                        <span class="font-semibold fs-16 text-dark"
+                          >Golf Details</span
+                        >
+                      </span>
+                    </ng-template>
+                    <div class="inclusions">
+                      <ul>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            12 tournament playing spots including tee gifts
+                            <span class="fw-600 text-dark">(4 groups)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            <span
+                              >First choice for celebrity golfers in your group </span
+                            ><span class="fw-600 text-dark"> (4 total)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            Green Fees, golf carts, breakfast, lunch, and on
+                            course activities
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>Group photo with celebrity</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </p-accordionTab>
+                  <p-accordionTab [iconPos]="'end'">
+                    <ng-template pTemplate="header">
+                      <span class="flex align-items-center gap-2 w-full">
+                        <span class="font-semibold fs-16 text-dark"
+                          >Sponsorship Inclusion</span
+                        >
+                      </span>
+                    </ng-template>
+                    <div class="inclusions">
+                      <ul>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            12 tournament playing spots including tee gifts
+                            <span class="fw-600 text-dark">(4 groups)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            <span
+                              >First choice for celebrity golfers in your group </span
+                            ><span class="fw-600 text-dark"> (4 total)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>
+                            Green Fees, golf carts, breakfast, lunch, and on
+                            course activities
+                          </div>
+                        </li>
+                        <li>
+                          <div><img src="assets/images/svgs/check.svg" /></div>
+                          <div>Group photo with celebrity</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </p-accordionTab>
+                </p-accordion>
+                @if (!item.soldOut) {
+                <div class="select-qty">
+                  <div class="qty-control-wrapper">
+                    <div class="center qty-control">
+                      <i class="pi pi-minus mr-0"></i>
+                    </div>
+                    <div class="fw-600">12</div>
+                    <div class="center qty-control">
+                      <i class="pi pi-plus mr-0"></i>
+                    </div>
+                  </div>
+                </div>
+                }@else {
+                <button class="eve-btn eve-btn-danger">Add to Wait List</button
+                >}
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      <div class="buttons-wrapper">
+        <button class="eve-btn eve-btn-danger-outline">Back</button>
+        <button class="eve-btn eve-btn-login">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>

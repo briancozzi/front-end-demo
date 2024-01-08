@@ -29,4 +29,11 @@ export const routes: Routes = [
         (m) => m.EventWizardSetupModule
       ),
   },
+  {
+    path: 'registration-flow',
+    loadChildren: () =>
+      import('./modules/registration-flow/registration-flow.module').then(
+        (m) => m.RegistrationFlowModule
+      ),
+  },
 ];

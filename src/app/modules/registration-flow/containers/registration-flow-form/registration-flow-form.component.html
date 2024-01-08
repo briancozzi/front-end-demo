@@ -1,0 +1,61 @@
+<div class="registration-flow-form">
+  <div class="center resgister-text">Registration Steps</div>
+  <div class="rff-nav-wrapper-desktop">
+    <div class="rff-nav-wrapper">
+      <ul class="rff-nav">
+        @for (item of formRouters; track item.link;let last = $last;let index =
+        $index) {
+        <li
+          class="rff-nav-item pointer"
+          [routerLink]="item.link"
+          [routerLinkActive]="'current'"
+          (click)="currentWorkingRouteIndex = item.currentIndex"
+          [ngClass]="{
+            completed: item.isCompleted || currentWorkingRouteIndex === index
+          }"
+        >
+          <div class="rff-nav-item-wrapper">
+            <div>{{ item.name }}</div>
+            <div style="flex-grow: 1" class="center" *ngIf="!last">
+              <i class="pi pi-chevron-right ml-0"></i>
+            </div>
+          </div>
+
+          <!-- <span *ngIf="!last"><i class="pi pi-chevron-right"></i></span> -->
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="rff-nav-wrapper-mobile">
+    <div class="rff-nav-wrapper">
+      <ul class="rff-nav">
+        @for (item of formRouters; track item.link;let last = $last;let index =
+        $index;let first = $first;) { @if (!first) {
+        <li
+          class="rff-nav-item"
+          [routerLink]="item.link"
+          [routerLinkActive]="'current'"
+          (click)="currentWorkingRouteIndex = item.currentIndex"
+          [ngClass]="{ completed: item.isCompleted }"
+        >
+          <div class="rff-nav-item-wrapper">
+            <div>
+              <span class="show-index">{{ index }}</span>
+              <span class="show-name"> {{ item.name }}</span>
+            </div>
+            <div style="flex-grow: 1" class="center" *ngIf="!last">
+              <i class="pi pi-chevron-right ml-0"></i>
+            </div>
+          </div>
+        </li>
+        } }
+      </ul>
+    </div>
+  </div>
+
+  <div class="rff-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

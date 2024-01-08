@@ -157,17 +157,17 @@
   }
   &.eve-input-box {
     position: relative;
-    label {
-      position: absolute;
-      margin-bottom: 0px;
-      margin-left: 12px;
-      margin-top: 12px;
-      font-size: 12px;
-      color: #606060;
-      font-weight: 500;
-      line-height: 11px;
-      font-size: 11px;
-    }
+    // label {
+    //   position: absolute;
+    //   margin-bottom: 0px;
+    //   margin-left: 12px;
+    //   margin-top: 12px;
+    //   font-size: 12px;
+    //   color: #606060;
+    //   font-weight: 500;
+    //   line-height: 11px;
+    //   font-size: 11px;
+    // }
     .form-control {
       height: 60px;
       // font-size: 14px;
@@ -187,6 +187,30 @@
         font-size: 16px;
         cursor: pointer;
         color: #000000;
+      }
+    }
+    &.label-in {
+      label {
+        position: absolute;
+        margin-bottom: 0px;
+        margin-left: 12px;
+        margin-top: 12px;
+        font-size: 12px;
+        color: #606060;
+        font-weight: 500;
+        line-height: 11px;
+        font-size: 11px;
+      }
+      .form-control {
+        height: 60px;
+        // font-size: 14px;
+        padding: 20px 12px 0px 12px;
+        background-color: #f2f2f2 !important;
+        border: 2px solid #f2f2f2;
+        border-radius: 8px;
+        &:focus {
+          border-color: #0075ff !important;
+        }
       }
     }
   }

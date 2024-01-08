@@ -1,0 +1,92 @@
+.registration-form-contact-form {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  .mt-28px {
+    margin-top: 28px;
+  }
+  .rfcf-heading {
+    .big-heading {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+    .small-heading {
+      font-size: 48px;
+      font-weight: 400;
+    }
+  }
+  .rfcf-user-form {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-container {
+      max-width: 700px;
+      width: 100%;
+      .row {
+        width: 100%;
+        label {
+          // margin-bottom: 0;
+          // padding-left: 16px;
+        }
+        .eve-input-box {
+          .form-control {
+            padding: 12px;
+            // font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .mt-28px {
+      margin-top: 28px;
+    }
+    .rfcf-heading {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      margin-left: 8px;
+      .big-heading {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 32px;
+      }
+      .small-heading {
+        font-size: 36px;
+        line-height: 32px;
+      }
+    }
+    .rfcf-user-form {
+      flex-grow: 1;
+      display: block;
+      .form-container {
+        max-width: 100%;
+        width: 100%;
+        .row {
+          width: 100%;
+          margin: 0 !important;
+          label {
+            // margin-bottom: 0;
+            // padding-left: 16px;
+          }
+          .eve-input-box {
+            .form-control {
+              padding: 12px;
+              // font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .mt-28px {
+      margin-top: 0;
+    }
+  }
+}

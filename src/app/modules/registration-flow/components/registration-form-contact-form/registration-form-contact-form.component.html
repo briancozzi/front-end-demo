@@ -1,0 +1,179 @@
+<div class="registration-form-contact-form">
+  <div class="rfcf-heading">
+    <div class="big-heading">Contact</div>
+    <div class="small-heading">Info</div>
+  </div>
+  <div class="rfcf-user-form">
+    <form action="">
+      <div class="form-container mt-32px">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Email Address </label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Password</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Name</label>
+              <p-dropdown
+                [required]="true"
+                name="initials"
+                [(ngModel)]="contactForm.initial"
+                [options]="['Mr.', 'Mrs.', 'Mine', 'Yours']"
+                [showClear]="false"
+                [filter]="false"
+                class="p-dropdown-eve-input"
+              ></p-dropdown>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="form-group eve-input-box mt-28px">
+              <label for="name"></label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="First Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="form-group eve-input-box mt-28px">
+              <label for="name"></label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Organization/Company</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Title</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Street Address 1</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group eve-input-box">
+              <label for="name">Street Address 2</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">City</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">State</label>
+              <p-dropdown
+                [required]="true"
+                name="timezones"
+                [options]="states"
+                [(ngModel)]="contactForm.state"
+                [showClear]="false"
+                placeholder="Select a state"
+                [filter]="false"
+                class="p-dropdown-eve-input"
+              ></p-dropdown>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Pincode</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Country</label>
+              <p-dropdown
+                [required]="true"
+                name="timezones"
+                [options]="states"
+                [(ngModel)]="contactForm.country"
+                [showClear]="false"
+                placeholder="Select a country"
+                [filter]="false"
+                class="p-dropdown-eve-input"
+              ></p-dropdown>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Business Phone</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group eve-input-box">
+              <label for="name">Home Phone</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group eve-input-box">
+              <label for="name" class="required">Mobile Phone</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group eve-input-box">
+              <label for="name">Fax</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-16px mb-32px">
+            <button class="eve-btn eve-btn-login w-100">
+              Continue To Next Step
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

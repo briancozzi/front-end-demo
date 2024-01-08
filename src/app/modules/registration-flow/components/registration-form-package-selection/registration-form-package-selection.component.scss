@@ -1,0 +1,279 @@
+.registration-form-package-selection {
+  display: flex;
+  flex-direction: row;
+  gap: 6em;
+  .eve-btn-danger {
+    font-weight: 600;
+    background-color: #d1410b;
+    font-size: 16px;
+    min-width: 180px;
+    border-radius: 8px;
+    height: 48px;
+    margin-top: 20px;
+  }
+  .eve-btn-danger-outline {
+    font-weight: 600;
+    border: 2px solid #d1410b !important;
+    border-width: 2px;
+    font-size: 16px;
+    min-width: 180px;
+    border-radius: 8px;
+    height: 48px;
+    &:hover {
+      background-color: #d1410b;
+      color: white;
+    }
+  }
+  .rfps-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 8px;
+    .big-heading {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+    .small-heading {
+      font-size: 36px;
+      line-height: 32px;
+    }
+  }
+  .text-danger {
+    color: #d1410b;
+  }
+  .note {
+    background-color: #e5e8ee;
+    padding: 16px;
+    height: min-content;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: 600;
+  }
+  .packages-content {
+    flex-grow: 1;
+
+    .packages-wrapper {
+      margin-top: 32px;
+      .packages {
+        max-width: 800px;
+        .heading {
+          line-height: 48px;
+          color: #d1410b;
+          font-weight: 700;
+          border-bottom: 2px solid rgb(52, 52, 52);
+          font-size: 14px;
+          margin-top: 32px;
+        }
+        .event-packages {
+          display: flex;
+          flex-direction: column;
+          gap: 48px;
+          margin-top: 32px;
+          .event-background {
+            background-color: var(--eve-green-color);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            width: calc(50% + 12px);
+            margin-left: -5px;
+            border-radius: 11px;
+            height: calc(70% + 12px);
+            z-index: 0;
+            margin-top: -5px;
+            bottom: -5px;
+            display: flex;
+            .text-rotate {
+              display: none !important;
+            }
+            &.is-selected {
+              // box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.15);
+              width: calc(100% + 11px);
+              height: calc(100% + 10px);
+            }
+            &.is-sold-out {
+              // box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.15);
+              background-color: #d1410b;
+              left: -30px;
+              .text-rotate {
+                display: flex !important;
+                transform: rotateZ(180deg);
+                writing-mode: vertical-rl;
+                text-align: left;
+                font-size: 20px;
+                white-space: nowrap;
+                margin-left: 4px;
+                color: white;
+                font-weight: 600;
+                text-transform: uppercase;
+              }
+              // width: calc(100% + 11px);
+              // height: calc(100% + 10px);
+            }
+          }
+          .event-package {
+            box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.15);
+            padding: 24px;
+            border-radius: 8px;
+            display: flex;
+            gap: 16px;
+            flex-direction: row;
+            position: relative;
+            background: white;
+            .details {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              min-width: 250px;
+              // justify-content: space-between;
+              .name {
+                font-size: 24px;
+                font-weight: 500;
+                color: var(--eve-green-color);
+              }
+              .tickets {
+                margin-top: 12px;
+                font-size: 12px;
+                color: #999999;
+                font-weight: 500;
+              }
+              .price {
+                margin-top: 12px;
+                font-size: 40px;
+                font-weight: 600;
+              }
+            }
+
+            .quantity {
+              .inclusions {
+                ul {
+                  li {
+                    font-size: 14px;
+                    display: flex;
+                    gap: 6px;
+                    img {
+                      margin-right: 8px;
+                      width: 16px;
+                    }
+                  }
+                }
+              }
+              .select-qty {
+                margin-top: 24px;
+                .qty-control-wrapper {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 12px;
+                  min-height: 32px;
+                  min-width: 96px;
+                  width: min-content;
+                  background-color: #f2f2f2;
+                  padding: 4px;
+                  border-radius: 25px;
+                  .qty-control {
+                    width: 24px;
+                    height: 24px;
+                    background-color: var(--eve-green-color);
+                    border-radius: 50%;
+                    color: white;
+                    cursor: pointer;
+                    &:hover {
+                      background-color: #63a447;
+                    }
+                    .pi {
+                      font-weight: 900;
+                    }
+                  }
+                }
+              }
+            }
+            &.sold-out {
+              .details {
+                .name,
+                .details,
+                .price {
+                  color: #cbcbcb;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .buttons-wrapper {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    .eve-btn {
+      width: 150px;
+      max-width: 200px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .packages-content {
+      .packages-wrapper {
+        .packages {
+          max-width: 100%;
+          .event-packages {
+            .event-background {
+              max-height: 200px;
+              &.is-sold-out {
+                top: -22px;
+                left: 0px;
+
+                .text-rotate {
+                  height: fit-content;
+                  display: flex !important;
+                  writing-mode: inherit;
+                  transform: none;
+                  text-align: center;
+                  font-size: 18px;
+                  width: 100%;
+                  white-space: nowrap;
+                  margin-left: 4px;
+                  color: white;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                }
+                // width: calc(100% + 11px);
+                // height: calc(100% + 10px);
+              }
+            }
+            .event-package {
+              flex-direction: column;
+              gap: 32px;
+              padding: 16px;
+              .details {
+                flex-direction: row;
+                justify-content: space-between;
+                .price {
+                  margin-top: 0;
+                  font-size: 28px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .buttons-wrapper {
+      margin-top: 36px;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      justify-content: space-between;
+      .eve-btn-danger-outline {
+        order: 1;
+      }
+      .eve-btn {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
