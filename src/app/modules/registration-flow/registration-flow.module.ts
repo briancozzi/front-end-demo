@@ -13,18 +13,26 @@ import { RegistrationFlowFormComponent } from './containers';
 import {
   RegistrationFormContactFormComponent,
   RegistrationFormPackageSelectionComponent,
+  RegistrationFormPackageCartComponent,
 } from './components';
 import { AccordionModule } from 'primeng/accordion';
+import { SidebarModule } from 'primeng/sidebar';
 
 const PAGES = [RegistrationFlowComponent];
 const CONTAINERS = [RegistrationFlowFormComponent];
 const COMPONENTS = [
   RegistrationFormContactFormComponent,
   RegistrationFormPackageSelectionComponent,
+  RegistrationFormPackageCartComponent,
 ];
 
 const STANDALONES_COMP = [ConfirmationModalComponent, BaseModalComponent];
-const LIB_MODULES = [ConfirmPopupModule, DropdownModule, AccordionModule];
+const LIB_MODULES = [
+  ConfirmPopupModule,
+  DropdownModule,
+  AccordionModule,
+  SidebarModule,
+];
 
 @NgModule({
   imports: [

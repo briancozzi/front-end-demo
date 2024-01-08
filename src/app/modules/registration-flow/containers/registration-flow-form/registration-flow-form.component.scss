@@ -10,10 +10,16 @@
     display: none !important;
   }
   .rff-nav-wrapper-mobile {
+    position: sticky;
+    top: 0;
+    z-index: 999;
     display: none;
   }
   .rff-nav-wrapper-desktop {
     display: block;
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
   .rff-nav-wrapper {
     background-color: #efefef;

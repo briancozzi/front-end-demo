@@ -5019,7 +5019,9 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 
 .p-sidebar {
   background: #ffffff;
-
+  width: max-content;
+  min-width: 300px;
+  z-index: 9999 !important;
   border: 0 none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -5030,7 +5032,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 .p-sidebar .p-sidebar-header .p-sidebar-icon {
   width: 2rem;
   height: 2rem;
-  color: #6c757d;
+  // color: #6c757d;
   border: 0 none;
   background: transparent;
   border-radius: 50%;
@@ -5038,7 +5040,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 .p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
 .p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
-  color: #343a40;
+  // color: #343a40;
   border-color: transparent;
   background: #e9ecef;
 }
@@ -7177,4 +7179,8 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
   }
+}
+
+.p-sidebar-mask {
+  display: none !important;
 }

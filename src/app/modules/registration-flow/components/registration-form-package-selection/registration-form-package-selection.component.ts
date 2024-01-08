@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration-form-package-selection.component.scss'],
 })
 export class RegistrationFormPackageSelectionComponent implements OnInit {
+  sidebarVisible2: boolean = false;
   eventPackages: any[] = [
     {
       name: 'Double Eagle',

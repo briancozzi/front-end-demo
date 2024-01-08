@@ -23,11 +23,7 @@
             >
               <div class="text-rotate center">Sold Out</div>
             </div>
-            <div
-              class="event-package"
-              style="z-index: 999"
-              [ngClass]="{ 'sold-out': item.soldOut }"
-            >
+            <div class="event-package" [ngClass]="{ 'sold-out': item.soldOut }">
               <div class="details">
                 <div>
                   <div class="name">{{ item.name }} <br />Sponsor</div>
@@ -157,11 +153,7 @@
             >
               <div class="text-rotate center">Sold Out</div>
             </div>
-            <div
-              class="event-package"
-              style="z-index: 999"
-              [ngClass]="{ 'sold-out': item.soldOut }"
-            >
+            <div class="event-package" [ngClass]="{ 'sold-out': item.soldOut }">
               <div class="details">
                 <div>
                   <div class="name">{{ item.name }} <br />Sponsor</div>
@@ -293,4 +285,19 @@
       </div>
     </div>
   </div>
+  <div class="rfps-cart-btn">
+    <img
+      (click)="sidebarVisible2 = true"
+      src="assets/images/svgs/package-cart.svg"
+      width="70px"
+      class="pointer"
+    />
+  </div>
 </div>
+<p-sidebar #sidebarRef [(visible)]="sidebarVisible2" [position]="'right'">
+  <ng-template pTemplate="headless">
+    <app-registration-form-package-cart
+      (OnClose)="sidebarVisible2 = false"
+    ></app-registration-form-package-cart>
+  </ng-template>
+</p-sidebar>

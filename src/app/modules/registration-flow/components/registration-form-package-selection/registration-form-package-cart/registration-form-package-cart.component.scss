@@ -1,0 +1,114 @@
+.registration-form-package-cart {
+  padding: 24px;
+  width: 400px;
+  .rfps-cart-btn {
+    position: absolute;
+    left: -70px;
+    top: -20px;
+  }
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    .pi {
+      color: #d9d9d9;
+      font-weight: 900;
+      cursor: pointer;
+      &:hover {
+        color: #d1410b;
+      }
+    }
+  }
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .cart-item {
+      display: flex;
+      flex-direction: column;
+      // border-bottom: 1px solid;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #cbcbcb;
+      gap: 32px;
+      .item-details {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+        .item-details-wrapper {
+          width: 290px;
+          .name {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--eve-green-color);
+          }
+          .tickets {
+            font-size: 14px;
+            font-weight: 500;
+            color: black;
+          }
+        }
+      }
+      .item-control {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .select-qty {
+          .qty-control-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            min-height: 32px;
+            min-width: 96px;
+            width: min-content;
+            background-color: #f2f2f2;
+            padding: 4px;
+            border-radius: 25px;
+            .qty-control {
+              width: 24px;
+              height: 24px;
+              background-color: var(--eve-green-color);
+              border-radius: 50%;
+              color: white;
+              cursor: pointer;
+              &:hover {
+                background-color: #63a447;
+              }
+              .pi {
+                font-weight: 900;
+              }
+            }
+          }
+        }
+        .price {
+          color: black;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .cart-content {
+    min-height: 500px;
+  }
+  .empty {
+    min-height: 500px;
+  }
+
+  @media (max-width: 450px) {
+    width: 100vw;
+    .cart-items {
+      .cart-item {
+        .item-details {
+          .item-details-wrapper {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}

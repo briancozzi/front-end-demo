@@ -1,0 +1,70 @@
+<div class="registration-form-package-cart">
+  <div class="rfps-cart-btn">
+    <img src="assets/images/svgs/package-cart.svg" width="70px" />
+  </div>
+  <div class="cart-header">
+    <div><h2 class="fw-bold text-dark mb-0">Your Cart</h2></div>
+    <div class="center">
+      <i class="pi pi-times fs-18" (click)="OnClose.emit()"></i>
+    </div>
+  </div>
+  @if(cartItems?.length){
+  <div class="cart-items">
+    @for (item of cartItems; track $index){
+    <div class="cart-item">
+      <div class="item-details">
+        <div class="item-details-wrapper">
+          <div class="name">{{ item.name }} Sponsor</div>
+          <div class="tickets">
+            <img src="assets/images/svgs/ticket.svg" width="20px" />
+            {{ item.numberOfTickets }} tickets in package
+          </div>
+        </div>
+        <div class="delete-btn">
+          <img
+            src="assets/images/svgs/cart-delete.svg"
+            width="35px"
+            class="pointer"
+          />
+        </div>
+      </div>
+      <div class="item-control">
+        <div class="select-qty">
+          <div class="qty-control-wrapper">
+            <div class="center qty-control">
+              <i class="pi pi-minus mr-0"></i>
+            </div>
+            <div class="fw-600 text-dark">12</div>
+            <div class="center qty-control">
+              <i class="pi pi-plus mr-0"></i>
+            </div>
+          </div>
+        </div>
+        <div class="price">
+          {{ item.price | currency : "USD" : "symbol" : "1.0-0" }}
+        </div>
+      </div>
+    </div>
+    }
+    <div class="justify-content-between d-flex">
+      <div class="fs-18 fw-500" style="color: #999999">Subtotal</div>
+      <div class="fs-24px fw-600 text-dark">
+        {{ 90000 | currency : "USD" : "symbol" : "1.0-0" }}
+      </div>
+    </div>
+    <div class="mt-24px">
+      <button class="eve-btn eve-btn-login w-100">Continue</button>
+    </div>
+  </div>
+
+  }@else{
+  <div class="empty center">
+    <div class="">
+      <div class="center">
+        <img src="assets/images/svgs/no-package.svg" width="100px" />
+      </div>
+      <div class="fw-600 text-dark mt-16px">No Packages Added</div>
+    </div>
+  </div>
+  }
+</div>

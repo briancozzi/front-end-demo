@@ -19,9 +19,10 @@ export const appConfig: ApplicationConfig = {
     //   multi: true
     // }
     {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthenticationInterceptor,
-      multi: true,
+        provide: HTTP_INTERCEPTORS,
+        useClass: AuthenticationInterceptor,
+        multi: true,
     },
-  ],
+    provideAnimations()
+],
 };
