@@ -8,7 +8,7 @@
       <i class="pi pi-times fs-18" (click)="OnClose.emit()"></i>
     </div>
   </div>
-  @if(cartItems?.length){
+  @if(cartItems.length){
   <div class="cart-items">
     @for (item of cartItems; track $index){
     <div class="cart-item">

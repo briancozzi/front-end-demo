@@ -11,7 +11,7 @@ export class FocusInputDirective {
     this._nextFocus = value instanceof ElementRef ? value.nativeElement : value;
   }
 
-  constructor(private el: ElementRef) {}
+  constructor() {}
 
   @HostListener('input', ['$event']) onInput(event: any) {
     const inputValue = event.target.value;

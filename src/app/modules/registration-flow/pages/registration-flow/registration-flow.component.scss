@@ -15,176 +15,252 @@
       padding: 0;
     }
   }
-  .rfh-wrapper {
-    padding: 18px;
-    background-color: #141414;
-    width: 100vw;
-    // position: fixed;
-    z-index: 9;
-    .rfh {
-      display: flex;
-      justify-content: space-between;
-      h2 {
-        font-size: 16px;
-        margin-right: 32px;
-      }
-    }
-
-    img {
-      width: 140px;
-    }
-  }
-  .registration-flow-bg {
-    // min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
-    // display: flex;
-    // align-items: start;
-    // overflow: hidden;
-    min-height: 100vh;
-    img {
-      position: relative;
-      overflow: hidden;
-      width: 100vw;
-      min-height: 100vh;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  .rf-container {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 74px;
-    width: 100%;
-    z-index: 40;
-    .rf-heading-wrapper {
-      display: flex;
-      justify-content: space-between;
-      .rf-heading {
-        color: white;
-        position: relative;
-        font-size: 72px;
-        line-height: 1.2;
-        line-height: normal;
-        font-weight: 700;
-        max-width: 700px;
-        text-shadow: 0px 0px 4px rgb(89 89 89 / 70%);
+  .header {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -345px;
+    .header-caption {
+      position: absolute;
+      // top: 74px;
+      width: 100%;
+      z-index: 40;
+      .header-caption-content {
+        color: #ededed;
+        text-shadow: 1px 1px 1px rgba(26, 35, 22, 0.7);
         letter-spacing: 1px;
-        margin-top: 3em;
-        .typed {
-          font-size: 32px;
-          font-weight: 700;
-          // width: min-content;
-        }
-      }
-      .rfh-logo-wrapper {
+        // padding-left: 30px;
         position: relative;
-        .rfh-logo {
-          position: absolute;
-          right: 0;
-          width: 200px;
-          height: 180px;
-          background-color: white;
-          padding: 24px;
-          img {
-            width: 100%;
-            height: 100%;
+        /* background: lightblue; */
+        height: 380px;
+        width: 100%;
+        display: table;
+        .rf-heading-wrapper {
+          vertical-align: bottom;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          gap: 48px;
+          .rf-heading {
+            color: white;
+            position: relative;
+            font-size: 72px;
+            line-height: 1.2;
+            line-height: normal;
+            font-weight: 700;
+            max-width: 700px;
+            text-shadow: 0px 0px 4px rgb(89 89 89 / 70%);
+            letter-spacing: 1px;
+            margin-top: 3em;
+            .typed {
+              font-size: 32px;
+              font-weight: 700;
+              margin-top: 15px;
+
+              // width: min-content;
+            }
+          }
+          .rfh-logo-wrapper {
+            position: relative;
+            .rfh-logo {
+              // position: absolute;
+              right: 31px;
+              width: 200px;
+              height: 180px;
+              background-color: white;
+              padding: 24px;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
           }
         }
       }
     }
-    .rf-content {
-      margin-top: 48px;
-      // padding-bottom: 32px;
-      .text-credits {
-        color: #999999;
-        margin: 32px 0;
+    .header-background {
+      position: relative;
+      height: 900px;
+      overflow: hidden;
+      ul {
+        &.slides {
+          height: 100%;
+          width: 100%;
+          li {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            opacity: 1;
+            z-index: 2;
+            img {
+              width: inherit;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    .rfh-wrapper {
+      padding: 19px;
+      background-color: #141414;
+      width: 100vw;
+      // position: fixed;
+      z-index: 9;
+      .rfh {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          font-size: 16px;
+          margin-right: 24px;
+          // margin-right: 32px;
+        }
+      }
+
+      img {
+        width: 140px;
       }
     }
   }
-
-  .typewriter {
-    width: fit-content;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 24px;
-    animation: typewriter 3s steps(40) infinite,
-      blink-caret 0.75s step-end infinite;
-  }
-
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  @keyframes blink-caret {
-    from,
-    to {
-      border-right: 2px solid #fff;
-    }
-    50% {
-      border-right: none;
-    }
+  .text-credits {
+    margin: 24px 0;
+    color: #999999;
   }
 
   @media (max-width: 991px) {
-    .rf-container {
-      .rf-heading-wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        height: 300px;
-        .rf-heading {
-          margin: auto 0 !important;
-          order: 1;
-          font-size: 45px;
-          margin-top: 0em;
-          .typed {
-            font-size: 32px;
-            margin-top: 16px;
-            // width: min-content;
+    .header {
+      margin-bottom: -300px;
+      .header-caption {
+        .header-caption-content {
+          .rf-heading-wrapper {
+            flex-direction: column;
+            gap: 32px;
+            .rf-heading {
+              order: 1;
+              font-size: 45px;
+              margin-top: 0;
+              .typed {
+                font-size: 24px;
+                font-weight: 700;
+                margin-top: 15px;
+
+                // width: min-content;
+              }
+            }
+            .rfh-logo-wrapper {
+              .rfh-logo {
+                // position: absolute;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
           }
         }
-        .rfh-logo-wrapper {
-          display: none;
+      }
+      .header-background {
+        height: 700px;
+        ul {
+          &.slides {
+            li {
+              img {
+                width: inherit;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+      .rfh-wrapper {
+        .rfh {
+          h2 {
+            margin-right: 24px;
+          }
+        }
+
+        img {
         }
       }
     }
   }
   @media (max-width: 767px) {
-    .rfh-wrapper {
-      padding: 12px;
-      .rfh {
-        h2 {
-          font-size: 12px;
-          margin-right: 0px;
-        }
-      }
+    .header {
+      margin-bottom: -300px;
+      .header-caption {
+        .header-caption-content {
+          .rf-heading-wrapper {
+            padding: 0 12px;
+            flex-direction: column;
+            gap: 32px;
+            .rf-heading {
+              order: 1;
+              font-size: 30px;
+              margin-top: 0;
+              .typed {
+                font-size: 20px;
+                font-weight: 700;
+                margin-top: 15px;
 
-      img {
-        width: 120px;
-      }
-    }
-    .rf-container {
-      .rf-heading-wrapper {
-        display: flex;
-        margin: 0 16px;
-        justify-content: space-between;
-        .rf-heading {
-          font-size: 36px;
-          font-weight: 700;
-          .typed {
-            font-size: 24px;
-            // width: min-content;
+                // width: min-content;
+              }
+            }
+            .rfh-logo-wrapper {
+              .rfh-logo {
+                width: 120px;
+                height: 120px;
+                padding: 24px;
+                margin-top: 12px;
+                // position: absolute;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
           }
         }
       }
+      .header-background {
+        height: 700px;
+        ul {
+          &.slides {
+            li {
+              img {
+                width: inherit;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+      .rfh-wrapper {
+        .rfh {
+          h2 {
+            margin-right: 0px;
+          }
+        }
+
+        img {
+        }
+      }
     }
-    .text-credits {
-      margin: 16px !important;
-    }
+  }
+}
+$typewriter-text: "Your long text goes here. This is a longer text that will wrap to the next line and be deleted as the typewriter effect progresses.";
+$typewriter-speed: 5s;
+.typewriter {
+  white-space: pre-line;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typing $typewriter-speed steps(50, end) infinite;
+  text-overflow: ellipsis;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
