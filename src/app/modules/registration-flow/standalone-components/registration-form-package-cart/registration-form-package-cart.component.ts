@@ -1,10 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { AutoCompleteCompleteEvent } from 'primeng/autocomplete';
+import { FormsModule } from '@angular/forms';
+import {
+  AutoCompleteCompleteEvent,
+  AutoCompleteModule,
+} from 'primeng/autocomplete';
 
 @Component({
   selector: 'app-registration-form-package-cart',
   templateUrl: './registration-form-package-cart.component.html',
   styleUrls: ['./registration-form-package-cart.component.scss'],
+  standalone: true,
+  imports: [CommonModule, FormsModule, AutoCompleteModule],
 })
 export class RegistrationFormPackageCartComponent implements OnInit {
   cartItems: any[] = [
