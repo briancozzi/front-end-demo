@@ -806,6 +806,32 @@ h2 {
   }
 }
 
+.p-radio-button-event-setup {
+  .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+    border-color: #3f7a7a;
+  }
+  .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+    outline: 0 none;
+    outline-offset: 0;
+    border-color: #3f7a7a;
+  }
+  .p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
+    width: 12px;
+    height: 12px;
+    transition-duration: 0.2s;
+    background-color: #ffffff;
+  }
+  .p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: #3f7a7a;
+    background: #3f7a7a;
+  }
+  .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+    border-color: #3f7a7a;
+    background: #3f7a7a;
+    color: #ffffff;
+  }
+}
+
 // .border-right-green {
 //   border-right: 2px solid var(--eve-green-color);
 // }

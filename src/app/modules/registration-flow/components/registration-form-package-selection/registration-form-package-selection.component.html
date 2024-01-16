@@ -281,23 +281,32 @@
       </div>
       <div class="buttons-wrapper">
         <button class="eve-btn eve-btn-danger-outline">Back</button>
-        <button class="eve-btn eve-btn-login">Continue</button>
+        <button class="eve-btn eve-btn-login" (click)="continue()">
+          Continue
+        </button>
       </div>
     </div>
   </div>
   <div class="rfps-cart-btn">
     <img
-      (click)="sidebarVisible2 = true"
+      (click)="viewCart()"
       src="assets/images/svgs/package-cart.svg"
       width="70px"
       class="pointer"
     />
+    <!-- <img
+      (click)="viewCart()"
+      src="assets/images/svgs/package-empty-cart.svg"
+      width="90px"
+      class="pointer"
+      style="right: -23px; position: fixed"
+    /> -->
   </div>
 </div>
-<p-sidebar #sidebarRef [(visible)]="sidebarVisible2" [position]="'right'">
+<p-sidebar #sidebarRef [(visible)]="isCartOpen" [position]="'right'">
   <ng-template pTemplate="headless">
     <app-registration-form-package-cart
-      (OnClose)="sidebarVisible2 = false"
+      (OnClose)="isCartOpen = false"
     ></app-registration-form-package-cart>
   </ng-template>
 </p-sidebar>

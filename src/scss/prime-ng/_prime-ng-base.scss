@@ -115,11 +115,11 @@
 //   position: fixed;
 // }
 .p-highlight {
-  color: var(--eve-primary-color) !important;
+  color: var(--eve-green-color) !important;
 }
 .p-checkbox .p-checkbox-box.p-highlight {
-  border-color: var(--eve-primary-color);
-  background: var(--eve-primary-color);
+  border-color: var(--eve-green-color);
+  background: var(--eve-green-color);
 }
 .p-datatable .p-datatable-thead > tr > th {
   font-weight: 600;
@@ -716,23 +716,23 @@ p-cascadeselect.p-cascadeselect-clearable .p-cascadeselect-clear-icon {
   color: #ffffff;
   margin-right: 0;
 }
-.p-checkbox .p-checkbox-box.p-highlight {
-  border-color: var(--eve-primary-color);
-  background: var(--eve-primary-color);
-}
-.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
-  border-color: var(--eve-primary-color);
-}
-.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
-  outline: 0 none;
-  outline-offset: 0;
-  border-color: var(--eve-primary-color);
-}
-.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
-  border-color: var(--eve-primary-color);
-  background: var(--eve-primary-color);
-  color: #ffffff;
-}
+// .p-checkbox .p-checkbox-box.p-highlight {
+//   border-color: var(--eve-primary-color);
+//   background: var(--eve-primary-color);
+// }
+// .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+//   border-color: var(--eve-primary-color);
+// }
+// .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+//   outline: 0 none;
+//   outline-offset: 0;
+//   border-color: var(--eve-primary-color);
+// }
+// .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+//   border-color: var(--eve-primary-color);
+//   background: var(--eve-primary-color);
+//   color: #ffffff;
+// }
 
 p-checkbox.ng-dirty.ng-invalid > .p-checkbox > .p-checkbox-box {
   border-color: #e24c4c;
@@ -1615,12 +1615,12 @@ p-password.p-password-clearable.p-password-mask .p-password-clear-icon {
     box-shadow 0.2s;
 }
 .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
-  border-color: var(--eve-primary-color);
+  border-color: var(--eve-green-color);
 }
 .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
   outline: 0 none;
   outline-offset: 0;
-  border-color: var(--eve-primary-color);
+  border-color: var(--eve-green-color);
 }
 .p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
   width: 12px;
@@ -1629,12 +1629,12 @@ p-password.p-password-clearable.p-password-mask .p-password-clear-icon {
   background-color: #ffffff;
 }
 .p-radiobutton .p-radiobutton-box.p-highlight {
-  border-color: var(--eve-primary-color);
-  background: var(--eve-primary-color);
+  border-color: var(--eve-green-color);
+  background: var(--eve-green-color);
 }
 .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
-  border-color: var(--eve-primary-color);
-  background: var(--eve-primary-color);
+  border-color: var(--eve-green-color);
+  background: var(--eve-green-color);
   color: #ffffff;
 }
 
@@ -5018,6 +5018,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 
 .p-sidebar {
+  color: var(--eve-base-color);
   background: #ffffff;
   width: max-content;
   min-width: 300px;

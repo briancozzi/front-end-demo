@@ -1,0 +1,60 @@
+<div class="center">
+  <div class="registration-form-fundraise">
+    <div class="">
+      <div class="header text-center">
+        Peer-to-peer fundraising allows individuals and teams to fundraise on
+        behalf of the organization.
+      </div>
+      <div class="center">
+        <div class="rff-card">
+          <div class="rff-card-header center mb-16px">Empower Your Support</div>
+          <div class="text-center text-secondary">
+            Your contribution can be credited to a team’s fundraising campaign,
+            or you can continue to the payment page.
+          </div>
+          <div class="payment-methods">
+            <div
+              class="payment-method"
+              [ngClass]="{ 'is-selected': paymentMethod === 'CREDIT' }"
+              (click)="changePaymentMethod('CREDIT')"
+            >
+              <div class="method-name">
+                <div class="center">GIVE CREDIT TO A FUNDRAISING TEAM</div>
+                <div class="">
+                  <div class="method-dot">
+                    <div class="dot"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="method-description">
+                Your support will count towards their collective efforts in
+                advancing the organization’s goals.
+              </div>
+            </div>
+            <div
+              class="payment-method"
+              [ngClass]="{ 'is-selected': paymentMethod === 'PAYMENT' }"
+              (click)="changePaymentMethod('PAYMENT')"
+            >
+              <div class="method-name">
+                <div>CONTINUE TO PAYMENT</div>
+                <div class="">
+                  <div class="method-dot">
+                    <div class="dot"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="method-description">
+                Complete your payment without attributing it to a specific
+                fundraising team.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <button class="eve-btn eve-btn-login mt-32px">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>

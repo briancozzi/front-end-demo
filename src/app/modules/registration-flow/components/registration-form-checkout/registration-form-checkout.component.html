@@ -1,0 +1,283 @@
+<div class="registration-form-checkout">
+  <div class="rfc-heading">
+    <div class="big-heading">Checkout</div>
+  </div>
+  <div class="center">
+    <div class="checkout-content">
+      <div class="checkout-wrapper">
+        <div class="section-heading">
+          <div class="text-danger">Package Information</div>
+          <div><span class="text-underline pointer">Edit</span></div>
+        </div>
+        <div class="cart-items">
+          @for (item of cartItems; track $index;let last = $last){
+          <div class="cart-item" [ngClass]="{ 'b-b-0': last }">
+            <div class="item-details">
+              <div class="item-details-wrapper">
+                <div class="name">{{ item.name }} Sponsor</div>
+                <div class="tickets flex gap-1 mt-8px">
+                  <div class="center">
+                    <img
+                      src="assets/images/svgs/ticket-black.svg"
+                      width="20px"
+                    />
+                    <!-- <svg-icon src="assets/images/svgs/ticket.svg"></svg-icon> -->
+                  </div>
+                  <div>{{ item.numberOfTickets }} tickets in package</div>
+                </div>
+              </div>
+              <div class="delete-btn">
+                <div class="price center">
+                  {{ item.price | currency : "USD" : "symbol" : "1.0-0" }}
+                </div>
+                <div>
+                  <img
+                    src="assets/images/svgs/cart-delete.svg"
+                    width="35px"
+                    class="pointer"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="item-control">
+              <div class="select-qty">
+                <div class="qty-control-wrapper">
+                  <div class="center qty-control">
+                    <i class="pi pi-minus mr-0"></i>
+                  </div>
+                  <div class="fw-600">12</div>
+                  <div class="center qty-control">
+                    <i class="pi pi-plus mr-0"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+        <div class="section-heading bg-fade-black mt-16px">
+          <div class="text-white">Guest Details</div>
+        </div>
+      </div>
+      <div class="mt-32px mb-32px">
+        <span class="text-underline text-danger pointer fw-600"
+          >Leave all tickets unassigned</span
+        >
+      </div>
+      <div class="pb-8px">
+        <app-registration-form-checkout-ticket />
+      </div>
+      <hr />
+      <div class="pricing-details">
+        <div>
+          <div class="center">Subtotal</div>
+          <div class="right-side">$90,000</div>
+        </div>
+        <div>
+          <div class="center">Add Promo Code</div>
+          <div class="right-side">
+            <div class="form-group eve-input-box mb-0">
+              <input type="text" name="email" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <div class="pb-8px">
+          <div class="center w-200px">
+            Credit Card Processing Fees (&#64;5%)
+          </div>
+          <div class="right-side">$4,500</div>
+        </div>
+        <hr />
+        <div class="pb-8px fs-16">
+          <div class="fw-600">Total Amount Due</div>
+          <div class="right-side fs-16">$94,500</div>
+        </div>
+        <hr />
+        <div>
+          <p-checkbox value="New York" inputId="processingFee"></p-checkbox>
+          <label
+            class="text-dark"
+            for="processingFee"
+            class="mb-0 pointer"
+            style="margin-left: -14px"
+            >I’d like to cover the $4,500 processing fee.</label
+          >
+        </div>
+      </div>
+      <div class="payment-method mt-32px">
+        <div class="section-heading mb-24px">
+          <div class="text-danger">Select Payment Method</div>
+        </div>
+        <div class="payment-method-form">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group eve-input-box">
+                <label for="name" class="">Payment Method</label>
+                <p-dropdown
+                  [required]="true"
+                  name="timezones"
+                  [options]="paymentMethods"
+                  [(ngModel)]="selectPaymentMethod"
+                  [showClear]="false"
+                  placeholder="Select Payment Method"
+                  [filter]="false"
+                  class="p-dropdown-eve-input"
+                ></p-dropdown>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-md-12">
+              <div class="form-group eve-input-box">
+                <label for="name" class="">Name on Card</label>
+                <input
+                  type="text"
+                  name="email"
+                  class="form-control"
+                  required
+                  placeholder="Full Name"
+                />
+              </div>
+            </div>
+          </div> -->
+          <div>
+            <app-registeration-form-payment />
+          </div>
+        </div>
+      </div>
+      <div class="billing-address mt-32px">
+        <div class="section-heading mb-24px">
+          <div class="text-danger">Billing Address</div>
+        </div>
+        <div class="billing-address-form">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group eve-input-box mt-28px">
+                <label for="name" class="required">First Name</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group eve-input-box mt-28px">
+                <label for="name" class="required">Last Name</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group eve-input-box">
+                <label for="name" class="required">Street Address 1</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group eve-input-box">
+                <label for="name">Street Address 2</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group eve-input-box">
+                <label for="name" class="required">City</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group eve-input-box">
+                <label for="name" class="required">State</label>
+                <p-dropdown
+                  [required]="true"
+                  name="timezones"
+                  [options]="states"
+                  [(ngModel)]="contactForm.state"
+                  [showClear]="false"
+                  placeholder="Select a state"
+                  [filter]="false"
+                  class="p-dropdown-eve-input"
+                ></p-dropdown>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group eve-input-box">
+                <label for="name" class="required">Zip Code</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group eve-input-box">
+                <label for="name" class="required">Country</label>
+                <p-dropdown
+                  [required]="true"
+                  name="timezones"
+                  [options]="states"
+                  [(ngModel)]="contactForm.country"
+                  [showClear]="false"
+                  placeholder="Select a country"
+                  [filter]="false"
+                  class="p-dropdown-eve-input"
+                ></p-dropdown>
+              </div>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <p-checkbox value="New York" inputId="t&c"></p-checkbox>
+            </div>
+            <div class="center">
+              <label class="text-dark" class="mb-0 ml-16px text-dark"
+                >I accept the
+                <span class="text-underline pointer">terms of service</span> and
+                have read the
+                <span class="text-underline pointer">privacy policy</span>. I
+                agree that Eventlify may share my information with the event
+                organizer.</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-24px">
+        <button class="eve-btn eve-btn-login">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>

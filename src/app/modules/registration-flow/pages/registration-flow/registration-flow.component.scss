@@ -55,7 +55,7 @@
               font-size: 32px;
               font-weight: 700;
               margin-top: 15px;
-
+              text-transform: uppercase;
               // width: min-content;
             }
           }
@@ -91,6 +91,15 @@
             position: relative;
             opacity: 1;
             z-index: 2;
+            &::before {
+              background-color: rgb(0 0 0 / 26%);
+              content: "";
+              display: inline-block;
+              // float: left;
+              height: 100%;
+              position: absolute;
+              width: 100%;
+            }
             img {
               width: inherit;
               height: 100%;
@@ -199,8 +208,6 @@
                 font-size: 20px;
                 font-weight: 700;
                 margin-top: 15px;
-
-                // width: min-content;
               }
             }
             .rfh-logo-wrapper {
@@ -236,6 +243,7 @@
         .rfh {
           h2 {
             margin-right: 0px;
+            display: none;
           }
         }
 
@@ -243,24 +251,12 @@
         }
       }
     }
-  }
-}
-$typewriter-text: "Your long text goes here. This is a longer text that will wrap to the next line and be deleted as the typewriter effect progresses.";
-$typewriter-speed: 5s;
-.typewriter {
-  white-space: pre-line;
-  overflow: hidden;
-  border-right: 2px solid white;
-  width: 0;
-  animation: typing $typewriter-speed steps(50, end) infinite;
-  text-overflow: ellipsis;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
+    .text-credits {
+      margin: 8px;
+      margin-top: 0px;
+      font-size: 12px;
+      margin-bottom: 12px;
+      color: #999999;
+    }
   }
 }

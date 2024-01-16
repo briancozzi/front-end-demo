@@ -14,9 +14,17 @@ import {
   RegistrationFormContactFormComponent,
   RegistrationFormPackageSelectionComponent,
   RegistrationFormPackageCartComponent,
+  RegistrationFormCheckoutComponent,
+  RegistrationFormFundraiseComponent,
+  RegistrationFormCheckoutTicketComponent,
+  RegisterationFormPaymentComponent,
 } from './components';
 import { AccordionModule } from 'primeng/accordion';
 import { SidebarModule } from 'primeng/sidebar';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { NgxStripeModule } from 'ngx-stripe';
 
 const PAGES = [RegistrationFlowComponent];
 const CONTAINERS = [RegistrationFlowFormComponent];
@@ -24,6 +32,10 @@ const COMPONENTS = [
   RegistrationFormContactFormComponent,
   RegistrationFormPackageSelectionComponent,
   RegistrationFormPackageCartComponent,
+  RegistrationFormCheckoutComponent,
+  RegistrationFormFundraiseComponent,
+  RegistrationFormCheckoutTicketComponent,
+  RegisterationFormPaymentComponent,
 ];
 
 const STANDALONES_COMP = [ConfirmationModalComponent, BaseModalComponent];
@@ -32,18 +44,21 @@ const LIB_MODULES = [
   DropdownModule,
   AccordionModule,
   SidebarModule,
+  AutoCompleteModule,
+  CheckboxModule,
+  RadioButtonModule,
 ];
 
 @NgModule({
   imports: [
     CommonModule,
+    NgxStripeModule.forRoot('***your-stripe-publishable-key***'),
     FormsModule,
     RegistrationFlowRoutes,
     ...LIB_MODULES,
     ...STANDALONES_COMP,
   ],
   declarations: [...PAGES, ...CONTAINERS, ...COMPONENTS],
-  // declarations: [...PAGES, ...CONTAINERS, ...COMPONENTS],
   exports: [...LIB_MODULES],
 })
 export class RegistrationFlowModule {}

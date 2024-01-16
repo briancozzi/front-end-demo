@@ -28,11 +28,9 @@ export class RegistrationFlowComponent implements OnInit, AfterViewInit {
       deleteSpeed: 140,
     });
     writer
-      .type(
-        `FRIDAY MAY 6, 2024 213123 213123 213123 2131231 21312 213123 21312 3`
-      )
-      .rest(1000)
-      .start()
-      .changeTypeColor('white');
+      .strings(400, 'FRIDAY MAY 6, 2024', 'LETS PARTY TOGETHER')
+      .changeTypeColor('white')
+      .rest(2000)
+      .start();
   }
 }

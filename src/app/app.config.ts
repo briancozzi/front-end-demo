@@ -6,12 +6,15 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthenticationInterceptor } from '@interceptors';
 import { provideAnimations } from '@angular/platform-browser/animations';
-
+import { provideEnvironmentNgxMask } from 'ngx-mask';
+import { provideNgxStripe } from 'ngx-stripe';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideClientHydration(),
     provideAnimations(),
+    // provideEnvironmentNgxMask(),
+    provideNgxStripe('***your-stripe-publishable-key***'),
     // {
     //   provide: APP_INITIALIZER,
     //   useFactory: initializeApp,
@@ -19,10 +22,10 @@ export const appConfig: ApplicationConfig = {
     //   multi: true
     // }
     {
-        provide: HTTP_INTERCEPTORS,
-        useClass: AuthenticationInterceptor,
-        multi: true,
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthenticationInterceptor,
+      multi: true,
     },
-    provideAnimations()
-],
+    provideAnimations(),
+  ],
 };

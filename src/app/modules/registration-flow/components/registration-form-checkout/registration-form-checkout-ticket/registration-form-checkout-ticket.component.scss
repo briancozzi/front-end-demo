@@ -1,0 +1,114 @@
+.registration-form-checkout-ticket {
+  .event-ticket-name {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--eve-green-color);
+    margin-bottom: 24px;
+  }
+
+  // .guests-container {
+  //   border: 1px solid #e7e7e7;
+  //   border-radius: 8px;
+  //   padding: 16px;
+  //   background-color: #fbfbfb;
+  // }
+  .p-eve-guests-accordion {
+    .section-heading {
+      font-size: 20px;
+      margin-top: 32px;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 12px;
+    }
+    .craddle {
+      display: flex;
+      flex-direction: row;
+      gap: 48px;
+    }
+    .label {
+      color: #606060;
+    }
+    .radio-label {
+      margin-left: 12px;
+      margin-bottom: 0;
+      color: black;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .even-btn-login-outline {
+      margin-top: 48px;
+      border-radius: 8px;
+      height: 52px;
+      font-weight: 600;
+      background-color: white;
+      border: 2px solid #1c1c1c !important;
+      color: #1c1c1c;
+      min-width: 250px;
+
+      &:hover {
+        background-color: #1c1c1c;
+        color: white;
+        // color: white;
+      }
+    }
+    ::ng-deep {
+      .p-accordion {
+        .p-accordion-tab {
+          margin-bottom: 12px;
+          &.p-accordion-tab-active {
+            border: 1px solid #e7e7e7;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #fbfbfb;
+            .p-accordion-header {
+              display: none;
+            }
+          }
+        }
+        .p-accordion-header {
+          .p-accordion-header-link {
+            padding: 14px 20px;
+            border-color: #dcdcdc !important;
+            background-color: #eeeeee;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row-reverse;
+            font-weight: 600;
+            .edit-btn {
+              font-size: 16px;
+              cursor: pointer;
+              text-decoration: underline;
+              color: black;
+              font-weight: 600;
+            }
+            &:hover {
+              background-color: #eeeeee !important;
+            }
+          }
+          &:hover {
+            .p-accordion-header:not(.p-disabled).p-highlight:hover
+              .p-accordion-header-link {
+              background-color: #f2f2f2 !important;
+              border-radius: 8px !important;
+              border-bottom-right-radius: 8px;
+              border-bottom-left-radius: 8px;
+            }
+          }
+        }
+        .p-accordion-content {
+          background-color: #fbfbfb;
+          border: none !important;
+        }
+      }
+      .p-accordion
+        .p-accordion-header:not(.p-disabled).p-highlight
+        .p-accordion-header-link {
+        background-color: #f2f2f2 !important;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      .guest-details {
+      }
+    }
+  }
+}

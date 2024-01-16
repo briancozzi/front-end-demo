@@ -1,7 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 import { RegistrationFlowComponent } from './pages/registration-flow/registration-flow.component';
 import {
+  RegistrationFormCheckoutComponent,
   RegistrationFormContactFormComponent,
+  RegistrationFormFundraiseComponent,
   RegistrationFormPackageSelectionComponent,
 } from './components';
 
@@ -22,6 +24,14 @@ const routes: Routes = [
       {
         path: 'package',
         component: RegistrationFormPackageSelectionComponent,
+      },
+      {
+        path: 'fundraise',
+        component: RegistrationFormFundraiseComponent,
+      },
+      {
+        path: 'checkout',
+        component: RegistrationFormCheckoutComponent,
       },
     ],
   },

@@ -1,0 +1,137 @@
+.registration-form-fundraise {
+  max-width: 900px;
+  .header {
+    font-size: 24px;
+    margin: 32px 0;
+  }
+  .rff-card {
+    padding: 3em 7em;
+    margin-top: 32px;
+    max-width: 750px;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    .rff-card-header {
+      font-size: 32px;
+    }
+    .payment-methods {
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      .payment-method {
+        border: 2px solid #f2f2f2;
+        border-radius: 8px;
+        cursor: pointer;
+        .method-name {
+          padding: 16px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-weight: 600;
+          font-size: 14px;
+          .method-dot {
+            border: 3px solid #999999;
+            border-radius: 50%;
+            padding: 4px 4px;
+            .dot {
+              background-color: white;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+            }
+          }
+        }
+        .method-description {
+          padding: 16px;
+          color: #999999;
+          background-color: #f2f2f2;
+          font-weight: 500;
+          font-size: 14px;
+          font-style: italic;
+          border-radius: 0px 0px 5px 5px;
+        }
+      }
+
+      .payment-method {
+        &.is-selected {
+          border-color: var(--eve-green-color) !important;
+          .method-name {
+            .method-dot {
+              border-color: var(--eve-green-color) !important;
+              .dot {
+                background-color: #77c156;
+              }
+            }
+          }
+          .method-description {
+            background-color: var(--eve-green-color) !important;
+            color: white;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .eve-btn {
+    margin-top: 48px !important;
+    margin-bottom: 32px;
+    min-width: 200px;
+  }
+  .text-secondary {
+    font-size: 16px;
+  }
+  @media (max-width: 900px) {
+    .header {
+      margin: 16px 0;
+      font-size: 20px;
+    }
+    .rff-card {
+      padding: 24px;
+
+      // box-shadow: none;
+      // border-top: 1px solid #dee2e6;
+      // border-radius: 0;
+      margin-top: 20px;
+      .rff-card-header {
+        font-size: 24px;
+      }
+      .payment-methods {
+        // margin: 0;
+        margin-top: 24px;
+        .payment-method {
+          .method-name {
+            padding: 12px;
+            font-size: 12px;
+            .method-dot {
+              border: 2px solid #999999;
+              padding: 3px 3px;
+              .dot {
+                width: 5px;
+                height: 5px;
+              }
+            }
+          }
+          .method-description {
+            padding: 12px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .eve-btn {
+      margin-top: 32px !important;
+      margin-bottom: 8px;
+      min-width: 200px;
+    }
+    .text-secondary {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 767px) {
+    .rff-card {
+      // padding: 0px;
+      margin-top: 20px;
+      padding-top: 24px;
+    }
+  }
+}

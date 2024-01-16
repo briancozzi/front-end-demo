@@ -28,12 +28,12 @@ export class RegistrationFlowFormComponent implements OnInit {
       link: 'fundraise',
       isCompleted: false,
     },
-    {
-      name: 'Questionnaire',
-      link: 'questionnaire',
-      currentIndex: 4,
-      isCompleted: false,
-    },
+    // {
+    //   name: 'Questionnaire',
+    //   link: 'questionnaire',
+    //   currentIndex: 4,
+    //   isCompleted: false,
+    // },
     {
       name: 'Checkout',
       link: 'checkout',
@@ -60,5 +60,6 @@ export class RegistrationFlowFormComponent implements OnInit {
       }
       return true;
     });
+    console.log(this.formRouters);
   }
 }
