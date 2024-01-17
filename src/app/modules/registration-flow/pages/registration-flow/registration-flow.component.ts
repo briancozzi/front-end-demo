@@ -5,7 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import Typewriter from 't-writer.js';
+import Typewriter from './../../../../../assets/vendors/t-writer.js/type-writer.js';
 
 @Component({
   selector: 'app-registration-flow',
@@ -17,8 +17,8 @@ export class RegistrationFlowComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngOnInit() {}
+
   ngAfterViewInit(): void {
-    console.log(this.typewriterElement2);
     const target = this.typewriterElement2.nativeElement;
     const writer = new Typewriter(target, {
       loop: true,

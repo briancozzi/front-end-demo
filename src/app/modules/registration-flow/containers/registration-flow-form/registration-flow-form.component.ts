@@ -60,6 +60,5 @@ export class RegistrationFlowFormComponent implements OnInit {
       }
       return true;
     });
-    console.log(this.formRouters);
   }
 }

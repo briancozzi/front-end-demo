@@ -9,38 +9,6 @@
     </div>
   </div>
   @if(cartItems.length){
-  <div class="card flex justify-content-center">
-    <p-autoComplete
-      name="locality"
-      [(ngModel)]="selectedUser"
-      [suggestions]="users"
-      [showClear]="true"
-      optionValue="firstName"
-      optionLabel="firstName"
-      field="firstName"
-      ><ng-template let-user pTemplate="item">
-        <div class="flex">
-          <div class="d-flex flex-column">
-            <div class="fs-16">{{ user.firstName }}</div>
-            <div class="font-weight-bolder fs-12">
-              {{ user.firstName | titlecase }}
-            </div>
-          </div>
-        </div>
-      </ng-template></p-autoComplete
-    >
-    <!-- <p-autoComplete
-      name="user"
-      [(ngModel)]="selectedUser"
-      [suggestions]="users"
-      field="firstName"
-      optionLabel="firstName"
-      [forceSelection]="true"
-      autocomplete="on"
-      [showClear]="true"
-      [lazy]="true"
-    ></p-autoComplete> -->
-  </div>
   <div class="cart-items">
     @for (item of cartItems; track $index){
     <div class="cart-item">
@@ -84,26 +52,58 @@
         {{ 90000 | currency : "USD" : "symbol" : "1.0-0" }}
       </div>
     </div>
-    <div class="">
+    <div class="" style="margin: 0px 6px">
       <div class="fs-14 fw-600">
         Your contribution can be credited to a team’s fundraising campaign, or
         you can continue to the payment page.
       </div>
       <div class="mt-32px">
-        <div class="form-group eve-input-box">
+        <div class="form-group eve-p-autocomplete eve-p-autocomplete-left-icon">
           <label class="fs-12"
             >Who should receive credit for your contribution?</label
           >
+          <div class="flex w-100">
+            <div class="w-100">
+              <div class="icon-wrapper">
+                <i class="pi pi-search"></i>
+              </div>
 
+              <!-- <label for="name" class="required">First Name</label> -->
+              <p-autoComplete
+                name="fundraiser"
+                placeholder="Search Fundraisers"
+                [(ngModel)]="selectedUser"
+                [suggestions]="filteredUsers"
+                [delay]="0"
+                [showEmptyMessage]="true"
+                [focusOnHover]="true"
+                [showClear]="true"
+                [autoHighlight]="true"
+                optionValue="firstName"
+                optionLabel="firstName"
+                class="eve-p-autocomplete"
+                (completeMethod)="search($event)"
+                ><ng-template let-user pTemplate="item">
+                  <div class="flex">
+                    <div class="d-flex flex-column">
+                      <div class="fs-18 fw-500">
+                        {{ user.firstName }} {{ user.maidenName }}
+                        {{ user.lastName }}
+                      </div>
+                    </div>
+                  </div>
+                </ng-template></p-autoComplete
+              >
+            </div>
+          </div>
           <!-- <input type="email" name="email" class="form-control" required /> -->
         </div>
       </div>
     </div>
-    <div class="mt-24px">
-      <button class="eve-btn eve-btn-login w-100">Checkout</button>
-    </div>
   </div>
-
+  <div class="mt-24px">
+    <button class="eve-btn eve-btn-login w-100">Checkout</button>
+  </div>
   }@else{
   <div class="empty center">
     <div class="">

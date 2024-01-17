@@ -14,19 +14,18 @@ import {
   imports: [StripeElementsDirective, StripePaymentElementComponent],
 })
 export class RegisterationFormPaymentComponent implements OnInit {
-  stripe: any;
-  // stripe = injectStripe(
-  //   'pk_test_51BTUDGJAJfZb9HEBwDg86TN1KNprHjkfipXmEDMb0gSCassK5T3ZfxsAbcgKVmAIXF7oZ6ItlZZbXO6idTHE67IM007EwQ4uN3'
-  // );
-  // elementsOptions: StripeElementsOptions = {
-  //   locale: 'en',
-  //   // passing the client secret obtained from the server
-  //   clientSecret:
-  //     'pi_3MtwBwLkdIwHu7ix28a3tqPa_secret_tR3PYbcVNZZ796tH88S4VQ2u ',
-  // };
+  stripe: any = injectStripe(
+    'pk_test_51BTUDGJAJfZb9HEBwDg86TN1KNprHjkfipXmEDMb0gSCassK5T3ZfxsAbcgKVmAIXF7oZ6ItlZZbXO6idTHE67IM007EwQ4uN3'
+  );
+  elementsOptions: StripeElementsOptions = {
+    locale: 'en',
+    // passing the client secret obtained from the server
+    clientSecret:
+      'seti_1Mm8s8LkdIwHu7ix0OXBfTRG_secret_NXDICkPqPeiBTAFqWmkbff09lRmSVXe ',
+  };
   constructor() {}
 
   ngOnInit() {
-    console.log(this.stripe);
+    // console.log(this.stripe);
   }
 }
