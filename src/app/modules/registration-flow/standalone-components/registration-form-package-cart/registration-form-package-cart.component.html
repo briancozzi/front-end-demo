@@ -64,39 +64,32 @@
           >
           <div class="flex w-100">
             <div class="w-100">
-              <div class="icon-wrapper">
+              <!-- <div class="icon-wrapper">
                 <i class="pi pi-search"></i>
-              </div>
+              </div> -->
 
               <!-- <label for="name" class="required">First Name</label> -->
-              <p-autoComplete
-                name="fundraiser"
-                placeholder="Search Fundraisers"
+              <p-dropdown
+                [required]="true"
+                name="initials"
                 [(ngModel)]="selectedUser"
-                [suggestions]="filteredUsers"
-                [delay]="0"
-                [showEmptyMessage]="true"
-                [focusOnHover]="true"
-                [showClear]="true"
-                [autoHighlight]="true"
+                [options]="users"
+                [showClear]="false"
+                [filter]="false"
+                class="p-dropdown-eve-input"
                 optionValue="firstName"
                 optionLabel="firstName"
-                class="eve-p-autocomplete"
-                (completeMethod)="search($event)"
                 ><ng-template let-user pTemplate="item">
-                  <div class="flex">
-                    <div class="d-flex flex-column">
-                      <div class="fs-18 fw-500">
-                        {{ user.firstName }} {{ user.maidenName }}
-                        {{ user.lastName }}
-                      </div>
+                  <div class="flex align-items-center gap-2">
+                    <div>
+                      {{ user.firstName }} {{ user.maidenName }}
+                      {{ user.lastName }}
                     </div>
                   </div>
-                </ng-template></p-autoComplete
+                </ng-template></p-dropdown
               >
             </div>
           </div>
-          <!-- <input type="email" name="email" class="form-control" required /> -->
         </div>
       </div>
     </div>
