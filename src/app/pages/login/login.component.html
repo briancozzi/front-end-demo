@@ -6,7 +6,7 @@
           <div class="">
             <img src="assets/images/svgs/eve-full-logo-dark.svg" />
           </div>
-          <div class="login-h1">Login</div>
+          <div class="login-h1">Login - {{ counter$ | async }}</div>
 
           <div class="row main-row h-100">
             <div class="col-md-12">
@@ -37,7 +37,9 @@
               </div>
             </div>
             <div class="col-md-12">
-              <button class="eve-btn eve-btn-login w-100">Login</button>
+              <button class="eve-btn eve-btn-login w-100" (click)="increment()">
+                Login
+              </button>
             </div>
             <div class="col-md-12">
               <div class="text-with-line"><span>OR</span></div>

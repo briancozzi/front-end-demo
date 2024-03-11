@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LoginComponent, LoginWelcomeBackComponent } from './pages';
+import { BooksListComponent } from './pages/books-list/books-list.component';
 
 export const routes: Routes = [
   {
@@ -21,6 +22,10 @@ export const routes: Routes = [
       import('./modules/create-new-account/create-new-account.module').then(
         (m) => m.CreateNewAccountModule
       ),
+  },
+  {
+    path: 'books',
+    component: BooksListComponent,
   },
   {
     path: 'event-setup',

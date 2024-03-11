@@ -1,32 +1,35 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { StorageService } from '@services';
-
+import { isPlatformBrowser } from '@angular/common';
 @Injectable({
   providedIn: 'root',
 })
 export class ErrorHandlingService {
-  public onlineFlag = navigator.onLine;
-
-  constructor(private router: Router, private storageService: StorageService) {}
+  constructor(
+    private router: Router,
+    private storageService: StorageService,
+    @Inject(PLATFORM_ID) private platformID: Object
+  ) {}
 
   public handleError(err: any) {
     if (err.status === 403 || err.status === 401) {
-      console.log('Its 403 / 401');
       this.closeAllModals();
       this.router.navigate(['/']);
       this.storageService.deleteUser();
     }
-    if (!this.onlineFlag) {
-      console.log('Internet not found');
-      // this.toastrService.error(
-      //   'Error',
-      //   'Internet Connection lost. Refresh after connecting to internet.'
-      // );
-    } else if (err.status === 0) {
-      // this.closeAllModals();
-      this.router.navigate(['/']);
-      this.storageService.deleteUser();
+    if (isPlatformBrowser(this.platformID)) {
+      if (!navigator.onLine) {
+        console.log('Internet not found');
+        // this.toastrService.error(
+        //   'Error',
+        //   'Internet Connection lost. Refresh after connecting to internet.'
+        // );
+      } else if (err.status === 0) {
+        // this.closeAllModals();
+        this.router.navigate(['/']);
+        this.storageService.deleteUser();
+      }
     }
   }
 

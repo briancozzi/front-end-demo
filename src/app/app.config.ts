@@ -1,31 +1,30 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, InjectionToken } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthenticationInterceptor } from '@interceptors';
+import {
+  HTTP_INTERCEPTORS,
+  provideHttpClient,
+  withFetch,
+} from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { provideEnvironmentNgxMask } from 'ngx-mask';
-import { provideNgxStripe } from 'ngx-stripe';
+import { AuthenticationInterceptor } from '@interceptors';
+import { provideStore } from '@ngrx/store';
+import { metaReducers, reducers } from './state/store.config';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideClientHydration(),
     provideAnimations(),
-    // provideEnvironmentNgxMask(),
-    provideNgxStripe('***your-stripe-publishable-key***'),
-    // {
-    //   provide: APP_INITIALIZER,
-    //   useFactory: initializeApp,
-    //   deps: [FontLoaderService],
-    //   multi: true
-    // }
+    provideHttpClient(withFetch()),
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthenticationInterceptor,
       multi: true,
     },
     provideAnimations(),
+    provideStore(reducers, { metaReducers }),
   ],
 };

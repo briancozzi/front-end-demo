@@ -1,0 +1,20 @@
+<div class="book-item p-32px container mt-32px">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (book of books; track $index) {
+      <tr>
+        <td>{{ book.volumeInfo.title }}</td>
+        <td>{{ book.volumeInfo.authors }}</td>
+        <td><button>Add to Collection</button></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
