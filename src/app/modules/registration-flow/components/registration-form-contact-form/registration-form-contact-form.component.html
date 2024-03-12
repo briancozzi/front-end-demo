@@ -4,28 +4,40 @@
     <div class="small-heading">Info</div>
   </div>
   <div class="rfcf-user-form">
-    <form action="">
+    <form #form="ngForm">
       <div class="form-container mt-32px">
         <div class="row">
           <div class="col-md-12">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Email Address </label>
-              <input type="email" name="email" class="form-control" required />
+              <label class="required">Email Address </label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                [(ngModel)]="contactForm.email"
+                required
+              />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Password</label>
-              <input type="email" name="email" class="form-control" required />
+              <label for="password" class="required">Password</label>
+              <input
+                type="password"
+                name="password"
+                [(ngModel)]="contactForm.password"
+                class="form-control"
+                required
+              />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-2">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Name</label>
+              <label for="initial" class="required">Name</label>
               <p-dropdown
                 [required]="true"
                 name="initials"
@@ -39,10 +51,11 @@
           </div>
           <div class="col-md-5">
             <div class="form-group eve-input-box mt-28px">
-              <label for="name"></label>
+              <label for="firstName"></label>
               <input
-                type="email"
-                name="email"
+                type="text"
+                name="firstName"
+                [(ngModel)]="contactForm.firstName"
                 class="form-control"
                 placeholder="First Name"
                 required
@@ -51,13 +64,13 @@
           </div>
           <div class="col-md-5">
             <div class="form-group eve-input-box mt-28px">
-              <label for="name"></label>
+              <label for="lastName"></label>
               <input
-                type="email"
-                name="email"
+                type="text"
+                name="lastName"
+                [(ngModel)]="contactForm.lastName"
                 class="form-control"
                 placeholder="Last Name"
-                required
               />
             </div>
           </div>
@@ -65,48 +78,77 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Organization/Company</label>
-              <input type="email" name="email" class="form-control" required />
+              <label for="company" class="required">Organization/Company</label>
+              <input
+                type="text"
+                name="company"
+                [(ngModel)]="contactForm.company"
+                class="form-control"
+                required
+              />
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Title</label>
-              <input type="email" name="email" class="form-control" required />
+              <label for="companyTitle" class="required">Title</label>
+              <input
+                type="text"
+                name="companyTitle"
+                [(ngModel)]="contactForm.companyTitle"
+                class="form-control"
+                required
+              />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Street Address 1</label>
-              <input type="email" name="email" class="form-control" required />
+              <label for="address1" class="required">Street Address 1</label>
+              <input
+                type="text"
+                name="address1"
+                [(ngModel)]="contactForm.address1"
+                class="form-control"
+                required
+              />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="form-group eve-input-box">
-              <label for="name">Street Address 2</label>
-              <input type="email" name="email" class="form-control" required />
+              <label for="address2">Street Address 2</label>
+              <input
+                type="text"
+                name="address2"
+                [(ngModel)]="contactForm.address2"
+                class="form-control"
+              />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">City</label>
-              <input type="email" name="email" class="form-control" required />
+              <label for="city" class="required">City</label>
+              <input
+                type="text"
+                name="city"
+                [(ngModel)]="contactForm.city"
+                class="form-control"
+                required
+              />
             </div>
           </div>
           <div class="col-md-4">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">State</label>
+              <label for="state" class="required">State</label>
               <p-dropdown
                 [required]="true"
-                name="timezones"
-                [options]="states"
+                name="state"
                 [(ngModel)]="contactForm.state"
+                [options]="states"
                 [showClear]="false"
                 placeholder="Select a state"
                 [filter]="false"
@@ -116,18 +158,24 @@
           </div>
           <div class="col-md-4">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Pincode</label>
-              <input type="email" name="email" class="form-control" required />
+              <label for="pincode" class="required">Pincode</label>
+              <input
+                type="text"
+                name="pincode"
+                [(ngModel)]="contactForm.pincode"
+                class="form-control"
+                required
+              />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Country</label>
+              <label for="country" class="required">Country</label>
               <p-dropdown
                 [required]="true"
-                name="timezones"
+                name="country"
                 [options]="states"
                 [(ngModel)]="contactForm.country"
                 [showClear]="false"
@@ -141,34 +189,60 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Business Phone</label>
-              <input type="email" name="email" class="form-control" required />
+              <label class="required">Business Phone</label>
+              <input
+                type="text"
+                name="businessPhoneNumber"
+                [(ngModel)]="contactForm.businessPhoneNumber"
+                class="form-control"
+                required
+              />
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group eve-input-box">
-              <label for="name">Home Phone</label>
-              <input type="email" name="email" class="form-control" required />
+              <label>Home Phone</label>
+              <input
+                type="text"
+                name="homePhoneNumber"
+                [(ngModel)]="contactForm.homePhoneNumber"
+                class="form-control"
+              />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group eve-input-box">
-              <label for="name" class="required">Mobile Phone</label>
-              <input type="email" name="email" class="form-control" required />
+              <label class="required">Mobile Phone</label>
+              <input
+                type="text"
+                name="mobileNumber"
+                [(ngModel)]="contactForm.mobileNumber"
+                class="form-control"
+                required
+              />
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group eve-input-box">
-              <label for="name">Fax</label>
-              <input type="email" name="email" class="form-control" required />
+              <label for="fax">Fax</label>
+              <input
+                type="text"
+                name="fax"
+                [(ngModel)]="contactForm.fax"
+                class="form-control"
+              />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 mt-16px mb-32px">
-            <button class="eve-btn eve-btn-login w-100">
+            <button
+              class="eve-btn eve-btn-login w-100"
+              (click)="onSubmit()"
+              [disabled]="form.invalid"
+            >
               Continue To Next Step
             </button>
           </div>

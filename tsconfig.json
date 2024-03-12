@@ -35,8 +35,11 @@
         "@shared-components": [
           "./src/app/shared/components"
         ],
-        "@utilities": [
+        "@utils": [
           "./src/app/shared/utilities"
+        ],
+        "@models": [
+          "./src/models"
         ],
         "@directives": [
           "./src/app/shared/directives"
